@@ -5,7 +5,7 @@ module.exports = {
     h_size: 1,
     v_size: 1,
     thickness: 0.15,
-    justify: null,
+    justify: 'left',
     layer: 'SilkS'
   },
   body: p => {
