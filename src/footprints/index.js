@@ -23,6 +23,7 @@ module.exports = {
     scrollwheel: require('./scrollwheel'),
     slider: require('./slider'),
     standoff: require('./standoff'),
+    text: require('./text'),
     trrs: require('./trrs'),
     via: require('./via'),
     xiao: require('./xiao'),
