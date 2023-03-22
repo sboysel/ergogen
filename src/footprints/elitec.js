@@ -26,7 +26,8 @@ module.exports = {
     C7: {type: 'net', value: 'C7'},
     F1: {type: 'net', value: 'F1'},
     F0: {type: 'net', value: 'F0'},
-    D5: {type: 'net', value: 'D5'}
+    D5: {type: 'net', value: 'D5'},
+    B0: {type: 'net', value: 'B0'}
   },
   body: p => {
     const body = `
