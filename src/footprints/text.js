@@ -9,7 +9,7 @@ module.exports = {
     layer: 'SilkS'
   },
   body: p => {
-    justify = p.justify && `(justify ${p.justify})` || '';
+    justify = p.justify != null && `(justify ${p.justify})` || '';
     // const mirror = p.param.side != 'F' ? 'mirror' : ''
     return `
             (gr_text "${p.text}" ${p.at} (layer ${p.side}.${p.layer})
