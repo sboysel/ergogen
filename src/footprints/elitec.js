@@ -1,37 +1,32 @@
 module.exports = {
-  nets: {
-    RAW: 'RAW',
-    GND: 'GND',
-    RST: 'RST',
-    VCC: 'VCC',
-    F4: 'F4',
-    F5: 'F5',
-    F6: 'F6',
-    F7: 'F7',
-    B1: 'B1',
-    B3: 'B3',
-    B2: 'B2',
-    B6: 'B6',
-    D3: 'D3',
-    D2: 'D2',
-    D1: 'D1',
-    D0: 'D0',
-    D4: 'D4',
-    C6: 'C6',
-    D7: 'D7',
-    E6: 'E6',
-    B4: 'B4',
-    B5: 'B5',
-    B7: 'B7',
-    C7: 'C7',
-    F1: 'F1',
-    F0: 'F0',
-    D5: 'D5',
-  },
   params: {
-    class: 'MCU',
-    orientation: 'up',
-    side: 'F'
+    RAW: {type: 'net', value: 'RAW'},
+    GND: {type: 'net', value: 'GND'},
+    RST: {type: 'net', value: 'RST'},
+    VCC: {type: 'net', value: 'VCC'},
+    F4: {type: 'net', value: 'F4'},
+    F5: {type: 'net', value: 'F5'},
+    F6: {type: 'net', value: 'F6'},
+    F7: {type: 'net', value: 'F7'},
+    B1: {type: 'net', value: 'B1'},
+    B3: {type: 'net', value: 'B3'},
+    B2: {type: 'net', value: 'B2'},
+    B6: {type: 'net', value: 'B6'},
+    D3: {type: 'net', value: 'D3'},
+    D2: {type: 'net', value: 'D2'},
+    D1: {type: 'net', value: 'D1'},
+    D0: {type: 'net', value: 'D0'},
+    D4: {type: 'net', value: 'D4'},
+    C6: {type: 'net', value: 'C6'},
+    D7: {type: 'net', value: 'D7'},
+    E6: {type: 'net', value: 'E6'},
+    B4: {type: 'net', value: 'B4'},
+    B5: {type: 'net', value: 'B5'},
+    B7: {type: 'net', value: 'B7'},
+    C7: {type: 'net', value: 'C7'},
+    F1: {type: 'net', value: 'F1'},
+    F0: {type: 'net', value: 'F0'},
+    D5: {type: 'net', value: 'D5'}
   },
   body: p => {
     const body = `
@@ -354,7 +349,8 @@ module.exports = {
       (fp_line (start -14.224 -3.556) (end -14.224 3.81) (layer "Dwgs.User") (width 0.2) (tstamp 5527f1ed-3051-4d26-b710-5ff4d76a7a30))
       (fp_line (start -19.304 3.81) (end -19.304 -3.556) (layer "Dwgs.User") (width 0.2) (tstamp b00d80fd-bfac-486b-88f3-26d0a8aeeebb))
       (fp_line (start -19.304 -3.556) (end -14.224 -3.556) (layer "Dwgs.User") (width 0.2) (tstamp f8c61750-5c0e-4749-ae24-a771253cc5da))
-      (pad "1" thru_hole rect (at -13.97 7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 2fca306f-980a-4bfb-80ef-b4c23cb6606b))
+      
+      (pad "1" thru_hole rect (at -13.97 7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 2fca306f-980a-4bfb-80ef-b4c23cb6606b) ${p.D3.str})
       (pad "2" thru_hole circle (at -11.43 7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp f0dbed5f-c639-49b8-b226-86c5fea8ad3a))
       (pad "3" thru_hole circle (at -8.89 7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 59e9c694-e689-43d6-a9c2-7bdb38b4386d))
       (pad "4" thru_hole circle (at -6.35 7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 7bd5faee-e4b9-458a-949c-5399f7441628))
@@ -366,6 +362,7 @@ module.exports = {
       (pad "10" thru_hole circle (at 8.89 7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 61f4c60b-bf77-42f5-84b4-fda320eaf3e7))
       (pad "11" thru_hole circle (at 11.43 7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp b40d0d48-a69b-4c05-9623-c1adbdeff36d))
       (pad "12" thru_hole circle (at 13.97 7.3914) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp e14d8563-e7d8-4051-9278-b2935afad97b))
+      
       (pad "13" thru_hole circle (at 13.97 -7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp ffaa889d-94f7-457c-bd22-177342aa4d78))
       (pad "14" thru_hole circle (at 11.43 -7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 456cd388-95f0-4163-bd52-a6c7f4e1aa1c))
       (pad "15" thru_hole circle (at 8.89 -7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp b842f545-f8c4-496e-ae71-639a8f14f124))
@@ -378,6 +375,7 @@ module.exports = {
       (pad "22" thru_hole circle (at -8.89 -7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp f6ba19b2-e64c-4266-a133-ddd9162ae4e7))
       (pad "23" thru_hole circle (at -11.43 -7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 21556fb3-4545-4e9b-b34b-561306b93e8b))
       (pad "24" thru_hole circle (at -13.97 -7.62) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp a02685dd-d915-4b16-805e-6e2e51bcfd93))
+      
       (pad "25" thru_hole circle (at 13.97 5.08) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 8b918202-59dd-40dd-8d25-5ade1176d40d))
       (pad "26" thru_hole circle (at 13.97 2.54) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 4a21d358-49d2-4752-862b-bf1c32cf9341))
       (pad "27" thru_hole circle (at 13.97 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (tstamp 8a65df5e-ec08-483c-afca-b88724ed42af))
