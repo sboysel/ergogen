@@ -45,7 +45,7 @@ module.exports = {
   body: p => {
     // pins run counter-clockwise from
     if(p.orientation == 'up') {
-      const body = `
+      return = `
       (module RPi_Pico_TH_oval_face_up 
         (layer F.Cu)
         (attr through_hole)
@@ -115,7 +115,7 @@ module.exports = {
       )
       `
     } else if(p.orientation == 'down') {
-    const body = `
+    return `
     (module "RPi_Pico_TH_oval_face_down"
     (layer "F.Cu")
     (attr through_hole)
@@ -345,7 +345,6 @@ module.exports = {
     `
     }
   }
-  return body
 }
 
 
