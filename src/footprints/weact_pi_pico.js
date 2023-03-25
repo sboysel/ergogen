@@ -45,7 +45,7 @@ module.exports = {
   body: p => {
     // pins run counter-clockwise from
     if(p.orientation == 'up') {
-      return = `
+      return `
       (module RPi_Pico_TH_oval_face_up 
         (layer F.Cu)
         (attr through_hole)
