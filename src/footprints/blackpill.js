@@ -166,7 +166,7 @@ module.exports = {
       `;
     }
 
-    if (p.param.orientation == "down") {
+    if (p.params.orientation == "down") {
       return `
         ${standard("B.SilkS")}
         ${pins("", "-", "B.SilkS")})
