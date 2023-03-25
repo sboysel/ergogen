@@ -36,8 +36,8 @@ module.exports = {
     AGND: {type: 'net', value: 'AGND'},
     GP28: {type: 'net', value: 'GP28'},
     ADC_VREF: {type: 'net', value: 'ADC_VREF'},
-    3V3: {type: 'net', value: '3V3'},
-    3V3_EN: {type: 'net', value: '3V3_EN'},
+    _3V3: {type: 'net', value: '3V3'},
+    _3V3_EN: {type: 'net', value: '3V3_EN'},
     GND: {type: 'net', value: 'GND'},
     VSYS: {type: 'net', value: 'VSYS'},
     VBUS: {type: 'net', value: 'VBUS'}
@@ -71,7 +71,7 @@ module.exports = {
       (fp_line (start 10.5 -24.2) (end 9.2 -25.5) (layer F.Fab) (width 0.12) (tstamp 80bc0467-dc46-4791-9307-44241d7966d4))
       (fp_line (start 10.5 -25.5) (end -10.5 -25.5) (layer F.Fab) (width 0.12) (tstamp d2cf8733-14a9-4c23-b276-1bc10c1a5f51))
       (fp_line (start -10.5 25.5) (end 10.5 25.5) (layer F.Fab) (width 0.12) (tstamp e840b107-3750-438e-b78f-29c9d0d23fc4))
-      (pad 1 thru_hole oval (at -8.82 -24.13) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp 261789c0-418e-4ec0-8cdf-89abe1f96c5d) ${p.nets.GP0.str})
+      (pad 1 thru_hole oval (at -8.82 -24.13) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp 261789c0-418e-4ec0-8cdf-89abe1f96c5d) ${p.GP0.str})
       (pad 2 thru_hole oval (at -8.82 -21.59) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp 82df91bd-b1f7-4cb5-a4b8-f014077ed225))
       (pad 3 thru_hole rect (at -8.82 -19.05) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp e2d28f85-8433-4782-86c1-698d98ca355b))
       (pad 4 thru_hole oval (at -8.82 -16.51) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp 6c215906-b1c0-41e7-a1ee-f64340a0df1f))
