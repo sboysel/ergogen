@@ -1,13 +1,11 @@
 module.exports = {
+  params: {
+    orientation: 'up'
+  },
   body: p => {
     const body = `
     (footprint "RPi_Pico_TH_oval_face_up" (version 20211014) (generator pcbnew)
       (layer "F.Cu")
-      (tedit 63922FBA)
-      (descr "Through hole straight pin header, 2x20, 2.54mm pitch, double rows")
-      (tags "Through hole pin header THT 2x20 2.54mm double row")
-      (property "Sheetfile" "44diodeless.left.kicad_sch")
-      (property "Sheetname" "")
       (attr through_hole)
       ${p.at}
       (fp_text reference "U0" (at 0 0) (layer "F.Fab") hide
@@ -72,13 +70,8 @@ module.exports = {
       (pad "38" thru_hole rect (at 8.82 -19.05) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp cb792c93-111c-4188-a8ba-8930e71f97d8))
       (pad "39" thru_hole oval (at 8.82 -21.59) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp b8260a4c-72c5-48e1-9736-d2140182d3fc))
       (pad "40" thru_hole oval (at 8.82 -24.13) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp 1a60f562-a956-4d54-a00f-6201c5b12308))
-      (model "C:/Users/ncara/OneDrive/IoT/Tools/KiCad/RP-Pico Libraries/Pico.wrl"
-        (offset (xyz 0 0 0))
-        (scale (xyz 1 1 1))
-        (rotate (xyz 0 0 0))
-      )
     )
-  `
+    `
     return body
   }
 }
