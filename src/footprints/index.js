@@ -26,5 +26,6 @@ module.exports = {
     text: require('./text'),
     trrs: require('./trrs'),
     via: require('./via'),
+    weact_pi_pico: require('./weact_pi_pico'),
     xiao: require('./xiao'),
 }
