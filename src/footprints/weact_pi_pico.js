@@ -119,6 +119,7 @@ module.exports = {
     (module "RPi_Pico_TH_oval_face_down"
     (layer "F.Cu")
     (attr through_hole)
+    ${p.at}
     (fp_text reference "U0" (at 0 0) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp db43bf1b-fd5c-4a08-b779-663eec4fe496)
