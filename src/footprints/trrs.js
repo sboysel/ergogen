@@ -32,12 +32,22 @@
 //      if true, will only work if reverse is also true
 //      this will cause the footprint to be symmetrical on each half
 //      pins 1 and 2 must be identical if symmetric is true, as they will overlap
+//    cross: default is false
+//      if true, will switch the position of pins 3 and 4 for the second half of
+//      the reverse footprint as shown below: 
+//     _________________
+//    |   (2)   (3) (4)|
+//    | (1)            |
+//    | (1)            |
+//    |___(2)___(4)_(3)|
+
 
 module.exports = {
   params: {
     designator: 'TRRS',
     reverse: false,
     symmetric: false,
+    cross: false,
     A: undefined,
     B: undefined,
     C: undefined,
@@ -69,34 +79,43 @@ module.exports = {
         (pad "" np_thru_hole circle (at ${def_pos} 1.6) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))
       `
     }
-    function pins(def_neg, def_pos) {
+    function pins(def_neg, def_pos, cross) {
+      if(cross) {
+      return `
+        (pad 1 thru_hole oval (at ${def_neg} 11.3 ${p.rot}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.A.str})
+        (pad 2 thru_hole oval (at ${def_pos} 10.2 ${p.rot}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.B.str})
+        (pad 3 thru_hole oval (at ${def_pos} 6.2 ${p.rot}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.D.str})
+        (pad 4 thru_hole oval (at ${def_pos} 3.2 ${p.rot}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.C.str})
+      `
+      } else {
       return `
         (pad 1 thru_hole oval (at ${def_neg} 11.3 ${p.r}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.A})
         (pad 2 thru_hole oval (at ${def_pos} 10.2 ${p.r}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.B})
         (pad 3 thru_hole oval (at ${def_pos} 6.2 ${p.r}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.C})
         (pad 4 thru_hole oval (at ${def_pos} 3.2 ${p.r}) (size 1.6 2.2) (drill oval 0.9 1.5) (layers *.Cu *.Mask) ${p.D})
       `
+      }
     }
     if(p.reverse & p.symmetric) {
       return `
         ${standard}
         ${stabilizers('-2.3')}
-        ${pins('0', '-4.6')}
-        ${pins('-4.6', '0')})
+        ${pins('0', '-4.6', false)}
+        ${pins('-4.6', '0', false)})
       `
     } else if(p.reverse) {
         return `
           ${standard}
           ${stabilizers('-2.3')}
           ${stabilizers('0')}
-          ${pins('-2.3', '2.3')}
-          ${pins('0', '-4.6')})
+          ${pins('-2.3', '2.3', false)}
+          ${pins('0', '-4.6', p.cross)})
         `
     } else {
       return `
         ${standard}
         ${stabilizers('-2.3')}
-        ${pins('-4.6', '0')})
+        ${pins('-4.6', '0', false)})
       `
     }
   }
