@@ -20,6 +20,7 @@ module.exports = {
     reset: require('./reset'),
     rgb: require('./rgb'),
     rotary: require('./rotary'),
+    rp2040_zero_tht_pads: require('./rp2040_zero_tht_pads'),
     rp2040_zero_tht_pads_cutout: require('./rp2040_zero_tht_pads_cutout'),
     scrollwheel: require('./scrollwheel'),
     slider: require('./slider'),
