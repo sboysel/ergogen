@@ -4,10 +4,8 @@ module.exports = {
   },
   body: p => {
     const body = `
-    (module "rp2040_zero_tht_pads" (version 20211014)
+    (module "rp2040_zero_tht_pads" (layer "F.Cu")
       ${p.at}
-      (layer "F.Cu")
-      (tedit 61DD8C16)
       (attr through_hole)
       (fp_text reference "U?" (at -16.3989 -16.53268) (layer "F.SilkS") hide
         (effects (font (size 0.889 0.889) (thickness 0.1016)))
