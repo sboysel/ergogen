@@ -4,11 +4,9 @@ module.exports = {
   },
   body: p => {
     const body = `
-    (module "rp2040_zero_tht_pads_cutout" (version 20211014) 
-      (layer "F.Cu")
-      (tedit 61DD8C67)
+    (module "rp2040_zero_tht_pads_cutout" (layer "F.Cu")
       ${p.at}
-      (attr through_hole exclude_from_pos_files)
+      (attr through_hole)
       (fp_text reference "U?" (at -16.3989 -16.53268) (layer "F.SilkS") hide
         (effects (font (size 0.889 0.889) (thickness 0.1016)))
         (tstamp 1c479411-a194-4685-8eeb-e81966c16c7f)
