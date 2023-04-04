@@ -9,7 +9,6 @@ module.exports = {
     const body = `
     (module molex_441440005 (layer F.Cu) (tedit 5F174929)
     ${p.at}
-    (attr smd)
     (fp_line (start -6.7300000000 -8.5700000000) (end -3.8700000000 -8.5700000000) (layer F.Silkscreen) (width 0.15))
     (fp_line (start 3.8700000000 -8.5700000000) (end 6.7300000000 -8.5700000000) (layer F.Silkscreen) (width 0.15))
     (fp_line (start 6.7300000000 8.5700000000) (end 6.7300000000 5.6400000000) (layer F.Silkscreen) (width 0.15))
