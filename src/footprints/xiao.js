@@ -19,7 +19,7 @@ module.exports = {
     P8: 'P8',
     P9: 'P9',
     P10: 'P10',
-    '3V3': '3V3',
+    _3V3: '3V3',
     RAW: 'RAW',
     BATp: 'BAT+',
     BATn: 'BAT-'
@@ -51,8 +51,8 @@ module.exports = {
   (pad "10" thru_hole circle (at 16.581 -7.95782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P9.str})
   (pad "11" thru_hole circle (at 16.581 -10.49782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P10.str})
   (pad "11" smd oval (at 16.99768 -10.49782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P10.str})
-  (pad "12" smd oval (at 16.99768 -13.03782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.'3V3'].str})
-  (pad "12" thru_hole circle (at 16.581 -13.03782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.'3V3'].str})
+  (pad "12" smd oval (at 16.99768 -13.03782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p._3V3.str})
+  (pad "12" thru_hole circle (at 16.581 -13.03782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p._3V3.str})
   (pad "13" smd oval (at 16.99768 -15.57782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.GND.str})
   (pad "13" thru_hole circle (at 16.581 -15.57782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.GND.str})
   (pad "14" thru_hole circle (at 16.581 -18.11782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.RAW.str})
