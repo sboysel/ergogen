@@ -9,6 +9,10 @@ module.exports = {
     const body = `
     (module "44144-0003" (layer F.Cu)
       ${p.at}
+      (fp_line (start -7.62 0) (end 7.62 0) (layer F.Fab) (width 0.2))
+      (fp_line (start 7.62 0) (end 7.62 16.89) (layer F.Fab) (width 0.2))
+      (fp_line (start 7.62 16.89) (end -7.62 16.89) (layer F.Fab) (width 0.2))
+      (fp_line (start -7.62 16.89) (end -7.62 0) (layer F.Fab) (width 0.2))
       (fp_line (start -7.62 0) (end -7.62 7.874) (layer F.SilkS) (width 0.2))
       (fp_line (start 7.62 0) (end 7.62 7.874) (layer F.SilkS) (width 0.2))
       (fp_line (start -7.62 16.89) (end 7.62 16.89) (layer F.SilkS) (width 0.2))
@@ -25,6 +29,10 @@ module.exports = {
       (pad 9 smd rect (at -6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers F.Cu F.Paste F.Mask) ${p.GND.str})
       (pad 10 smd rect (at 6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers F.Cu F.Paste F.Mask) ${p.GND.str})
 
+      (fp_line (start -7.62 0) (end 7.62 0) (layer B.Fab) (width 0.2))
+      (fp_line (start 7.62 0) (end 7.62 16.89) (layer B.Fab) (width 0.2))
+      (fp_line (start 7.62 16.89) (end -7.62 16.89) (layer B.Fab) (width 0.2))
+      (fp_line (start -7.62 16.89) (end -7.62 0) (layer B.Fab) (width 0.2))
       (fp_line (start -7.62 0) (end -7.62 7.874) (layer B.SilkS) (width 0.2))
       (fp_line (start 7.62 0) (end 7.62 7.874) (layer B.SilkS) (width 0.2))
       (fp_line (start -7.62 16.89) (end 7.62 16.89) (layer B.SilkS) (width 0.2))
