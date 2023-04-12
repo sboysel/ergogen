@@ -10,6 +10,7 @@ module.exports = {
     jstph: require('./jstph'),
     jumper: require('./jumper'),
     m2: require('./m2'),
+    molex_441440003: require('./molex_441440003'),
     molex_441440005: require('./molex_441440005'),
     mx: require('./mx'),
     nice_nano: require('./nice_nano'),
