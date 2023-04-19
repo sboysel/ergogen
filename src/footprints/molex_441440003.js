@@ -26,8 +26,8 @@ module.exports = {
       (pad 6 smd rect (at 1.905 -0.83 ${p.rot}) (size 0.64 2.54) (layers F.Cu F.Paste F.Mask) ${p.RX.str})
       (pad 7 smd rect (at 3.175 -0.83 ${p.rot}) (size 0.64 2.54) (layers F.Cu F.Paste F.Mask) ${p.GND.str})
       (pad 8 smd rect (at 4.445 -0.83 ${p.rot}) (size 0.64 2.54) (layers F.Cu F.Paste F.Mask) ${p.POWER.str})
-      (pad 9 smd rect (at -6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers F.Cu F.Paste F.Mask) ${p.GND.str})
-      (pad 10 smd rect (at 6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers F.Cu F.Paste F.Mask) ${p.GND.str})
+      (pad 9 smd rect (at -6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers F.Cu F.Paste F.Mask))
+      (pad 10 smd rect (at 6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers F.Cu F.Paste F.Mask))
 
       (fp_line (start -7.62 0) (end 7.62 0) (layer B.Fab) (width 0.2))
       (fp_line (start 7.62 0) (end 7.62 16.89) (layer B.Fab) (width 0.2))
@@ -46,8 +46,8 @@ module.exports = {
       (pad 6 smd rect (at 1.905 -0.83 ${p.rot}) (size 0.64 2.54) (layers B.Cu B.Paste B.Mask) ${p.RX.str})
       (pad 7 smd rect (at 3.175 -0.83 ${p.rot}) (size 0.64 2.54) (layers B.Cu B.Paste B.Mask) ${p.GND.str})
       (pad 8 smd rect (at 4.445 -0.83 ${p.rot}) (size 0.64 2.54) (layers B.Cu B.Paste B.Mask) ${p.POWER.str})
-      (pad 9 smd rect (at -6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers B.Cu B.Paste B.Mask) ${p.GND.str})
-      (pad 10 smd rect (at 6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers B.Cu B.Paste B.Mask) ${p.GND.str})
+      (pad 9 smd rect (at -6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers B.Cu B.Paste B.Mask))
+      (pad 10 smd rect (at 6.35 10.945 ${p.rot}) (size 2.54 5.21) (layers B.Cu B.Paste B.Mask))
 
     )
     `
