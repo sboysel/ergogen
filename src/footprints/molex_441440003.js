@@ -13,9 +13,6 @@ module.exports = {
       (fp_line (start 7.62 0) (end 7.62 16.89) (layer F.Fab) (width 0.2))
       (fp_line (start 7.62 16.89) (end -7.62 16.89) (layer F.Fab) (width 0.2))
       (fp_line (start -7.62 16.89) (end -7.62 0) (layer F.Fab) (width 0.2))
-      (fp_line (start -7.62 0) (end -7.62 7.874) (layer F.SilkS) (width 0.2))
-      (fp_line (start 7.62 0) (end 7.62 7.874) (layer F.SilkS) (width 0.2))
-      (fp_line (start -7.62 16.89) (end 7.62 16.89) (layer F.SilkS) (width 0.2))
       (fp_circle (center -4.48 -2.704) (end -4.48 -2.61208) (layer F.SilkS) (width 0.2))
 
       (pad 1 smd rect (at -4.445 -0.83 ${p.rot}) (size 0.64 2.54) (layers F.Cu F.Paste F.Mask) ${p.POWER.str})
@@ -33,9 +30,6 @@ module.exports = {
       (fp_line (start 7.62 0) (end 7.62 16.89) (layer B.Fab) (width 0.2))
       (fp_line (start 7.62 16.89) (end -7.62 16.89) (layer B.Fab) (width 0.2))
       (fp_line (start -7.62 16.89) (end -7.62 0) (layer B.Fab) (width 0.2))
-      (fp_line (start -7.62 0) (end -7.62 7.874) (layer B.SilkS) (width 0.2))
-      (fp_line (start 7.62 0) (end 7.62 7.874) (layer B.SilkS) (width 0.2))
-      (fp_line (start -7.62 16.89) (end 7.62 16.89) (layer B.SilkS) (width 0.2))
       (fp_circle (center -4.48 -2.704) (end -4.48 -2.61208) (layer B.SilkS) (width 0.2))
 
       (pad 1 smd rect (at -4.445 -0.83 ${p.rot}) (size 0.64 2.54) (layers B.Cu B.Paste B.Mask) ${p.POWER.str})
