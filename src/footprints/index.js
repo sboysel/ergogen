@@ -12,6 +12,7 @@ module.exports = {
     m2: require('./m2'),
     molex_441440003: require('./molex_441440003'),
     molex_441440005: require('./molex_441440005'),
+    mountinghole: require('./mountinghole'),
     mx: require('./mx'),
     nice_nano: require('./nice_nano'),
     oled: require('./oled'),
