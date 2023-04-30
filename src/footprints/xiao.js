@@ -1,104 +1,48 @@
 // Seeduino XIAO with vias for underside pads
-// https://raw.githubusercontent.com/enzocoralc/ergogen/mveerd/src/footprints/xiao.js
+// https://github.com/crides/kleeb/blob/master/mcu.pretty/xiao-tht.kicad_mod 
 module.exports = {
   params: {
-    side: 'F',
-    VIN: {type: 'net', value: 'VIN'},
-    DIO: {type: 'net', value: 'DIO'},
-    CLK: {type: 'net', value: 'CLK'},
-    RST: {type: 'net', value: 'RST'},
-    GND: {type: 'net', value: 'GND'},
-    P0: {type: 'net', value: 'P0'},
-    P1: {type: 'net', value: 'P1'},
-    P2: {type: 'net', value: 'P2'},
-    P3: {type: 'net', value: 'P3'},
-    P4: {type: 'net', value: 'P4'},
-    P5: {type: 'net', value: 'P5'},
-    P6: {type: 'net', value: 'P6'},
-    P7: {type: 'net', value: 'P7'},
-    P8: {type: 'net', value: 'P8'},
-    P9: {type: 'net', value: 'P9'},
-    P10: {type: 'net', value: 'P10'},
+    SV: {type: 'net', value: 'SV'},
     _3V3: {type: 'net', value: '3V3'},
-    RAW: {type: 'net', value: 'RAW'},
-    BATp: {type: 'net', value: 'BAT+'},
-    BATn: {type: 'net', value: 'BAT-'}
+    D0: {type: 'net', value: 'D0'},
+    D1: {type: 'net', value: 'D1'},
+    D2: {type: 'net', value: 'D2'},
+    D3: {type: 'net', value: 'D3'},
+    D4: {type: 'net', value: 'D4'},
+    D5: {type: 'net', value: 'D5'},
+    D6: {type: 'net', value: 'D6'},
+    D7: {type: 'net', value: 'D7'},
+    D8: {type: 'net', value: 'D8'},
+    D9: {type: 'net', value: 'D9'},
+    D10: {type: 'net', value: 'D10'}
   },
   body: p => `
-      (module "Seeeduino XIAO-MOUDLE14P-2.54-21X17.8MM tht maybe" (layer "${p.side}.Cu") (tedit 613ABEDD) (attr smd)
+    (module "xiao-tht" (version 20211014)
+      (layer "F.Cu")
+      (tedit 61D9008C)
+      (attr smd exclude_from_pos_files)
       ${p.at /* parametric position */}
-
-  ${``/* Pads */}
-  (pad "1" smd oval (at 0.83312 -18.11782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P0.str})
-  (pad "1" thru_hole circle (at 1.25 -18.11782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P0.str})
-  (pad "2" thru_hole circle (at 1.25 -15.57782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P1.str})
-  (pad "2" smd oval (at 0.83312 -15.57782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P1.str})
-  (pad "3" smd oval (at 0.83312 -13.03782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P2.str})
-  (pad "3" thru_hole circle (at 1.25 -13.03782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P2.str})
-  (pad "4" smd oval (at 0.83312 -10.49782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P3.str})
-  (pad "4" thru_hole circle (at 1.25 -10.49782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P3.str})
-  (pad "5" thru_hole circle (at 1.25 -7.95782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P4.str})
-  (pad "5" smd oval (at 0.83312 -7.95782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P4.str})
-  (pad "6" smd oval (at 0.83312 -5.41782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P5.str})
-  (pad "6" thru_hole circle (at 1.25 -5.41782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P5.str})
-  (pad "7" thru_hole circle (at 1.25 -2.87782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P6.str})
-  (pad "7" smd oval (at 0.83312 -2.87782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P6.str})
-  (pad "8" thru_hole circle (at 16.581 -2.87782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P7.str})
-  (pad "8" smd oval (at 16.99768 -2.87782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P7.str})
-  (pad "9" smd oval (at 16.99768 -5.41782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask")  ${p.P8.str})
-  (pad "9" thru_hole circle (at 16.581 -5.41782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask)  ${p.P8.str})
-  (pad "10" smd oval (at 16.99768 -7.95782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P9.str})
-  (pad "10" thru_hole circle (at 16.581 -7.95782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P9.str})
-  (pad "11" thru_hole circle (at 16.581 -10.49782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.P10.str})
-  (pad "11" smd oval (at 16.99768 -10.49782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.P10.str})
-  (pad "12" smd oval (at 16.99768 -13.03782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p._3V3.str})
-  (pad "12" thru_hole circle (at 16.581 -13.03782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p._3V3.str})
-  (pad "13" smd oval (at 16.99768 -15.57782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.GND.str})
-  (pad "13" thru_hole circle (at 16.581 -15.57782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.GND.str})
-  (pad "14" thru_hole circle (at 16.581 -18.11782) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.RAW.str})
-  (pad "14" thru_hole oval (at 16.99768 -18.11782 ${p.rot}) (size 2.74828 1.99898) (layers "${p.side}.Cu" "${p.side}.Paste" "${p.side}.Mask") ${p.RAW.str})
-  (pad "15" thru_hole oval (at 7.7 -1.8 ${p.rot + 90}) (size 2.032 1.016) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.DIO.str})
-  (pad "16" thru_hole oval (at 10.25 -1.8 ${p.rot + 90}) (size 2.032 1.016) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.CLK.str})
-  (pad "17" thru_hole circle (at 7.698803 -18.804187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.RST.str})
-  (pad "18" thru_hole circle (at 10.238803 -18.804187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.GND.str})
-  (pad "19" thru_hole circle (at 7.698803 -16.264187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.BATp.str})
-  (pad "20" thru_hole circle (at 10.238803 -16.264187) (size 1.143 1.143) (drill 0.3) (layers *.Cu *.Paste *.Mask) ${p.BATn.str})
-
-  ${``/* Silkscreen */}
-  (fp_line (start 13.39342 -22.42312) (end 13.39342 -15.06982) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 5.461 -18.415) (end 5.461 -21.082) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 4.3942 -15.06982) (end 4.3942 -22.42312) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 11.43 -17.78) (end 11.43 -20.32) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 14.097 -18.415) (end 14.097 -21.082) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 3.683 -18.415) (end 3.683 -21.082) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 12.319 -14.34846) (end 12.319 -17.018) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 3.683 -21.082) (end 5.461 -21.082) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 6.35 -3.175) (end 12.065 -3.175) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 12.319 -14.34846) (end 14.097 -14.34846) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 12.319 -18.415) (end 14.097 -18.415) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 12.319 -18.415) (end 12.319 -21.082) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 3.683 -17.018) (end 5.461 -17.018) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 14.097 -14.34846) (end 14.097 -17.018) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 13.39342 -15.06982) (end 4.3942 -15.06982) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 5.461 -14.34846) (end 5.461 -17.018) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 6.35 -20.32) (end 11.43 -20.32) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 6.35 -17.78) (end 6.35 -20.32) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 6.35 -0.635) (end 6.35 -3.175) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 0 0) (end 17.79778 0) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 12.319 -21.082) (end 14.097 -21.082) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 3.683 -18.415) (end 5.461 -18.415) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 3.683 -14.34846) (end 5.461 -14.34846) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 12.065 -0.635) (end 12.065 -3.175) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 6.35 -17.78) (end 11.43 -17.78) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 17.79778 0) (end 17.79778 -20.99818) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 0 -20.32762) (end 0 0) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 3.683 -14.34846) (end 3.683 -17.018) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 0.67056 -20.99818) (end 0 -20.32762) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 6.35 -0.635) (end 12.065 -0.635) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_line (start 17.79778 -20.99818) (end 0.67056 -20.99818) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 4.39928 -22.42312) (end 13.39342 -22.42312) (layer "${p.side}.SilkS") (width 0.127))
-  (fp_line (start 12.319 -17.018) (end 14.097 -17.018) (layer "${p.side}.SilkS") (width 0.06604))
-  (fp_circle (center -0.889 -18.161) (end -0.889 -18.415) (layer "${p.side}.SilkS") (width 1))
-)
-     `
+      (fp_rect (start -8.89 10.5) (end 8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 116e44aa-10c6-4541-8b90-5b7a2f5434bd))
+      (fp_rect (start 3.350197 -6.785813) (end 5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp a1111a45-eeef-42a4-8ca2-b88859685c82))
+      (fp_rect (start -3.507811 -8.182813) (end -5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp a6f271d5-ba8a-454d-80cb-5f2f863f2343))
+      (fp_rect (start 3.350197 -10.849813) (end 5.128197 -8.182813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp bb88374b-bed5-4557-ac17-b524808b3664))
+      (fp_rect (start -5.285811 -6.785813) (end -3.507811 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp f5248a36-36cb-4bf1-a463-d1ff91adf3ac))
+      (pad "1" thru_hole oval (at -7.62 -7.62 ${p.rot}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D6.str})
+      (pad "2" thru_hole oval (at -7.62 -5.08 ${p.rot}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D5.str})
+      (pad "3" thru_hole oval (at -7.62 -2.54 ${p.rot}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D4.str})
+      (pad "4" thru_hole oval (at -7.62 0 ${p.rot}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D3.str})
+      (pad "5" thru_hole oval (at -7.62 2.54 ${p.rot}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D2.str})
+      (pad "6" thru_hole oval (at -7.62 5.08 ${p.rot}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D1.str})
+      (pad "7" thru_hole oval (at -7.62 7.62 ${p.rot}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D0.str})
+      (pad "8" thru_hole oval (at 7.62 7.62 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.SV.str})
+      (pad "9" thru_hole oval (at 7.62 5.08 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) GND)
+      (pad "10" thru_hole oval (at 7.62 2.54 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p._3V3.str})
+      (pad "11" thru_hole oval (at 7.62 0 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D10.str})
+      (pad "12" thru_hole oval (at 7.62 -2.54 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D9.str})
+      (pad "13" thru_hole oval (at 7.62 -5.08 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D8.str})
+      (pad "14" thru_hole oval (at 7.62 -7.62 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D7.str})
+    )
+    `
 }
+    
+
