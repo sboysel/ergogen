@@ -20,7 +20,7 @@ module.exports = {
     (module "xiao-tht" (version 20211014)
       (layer "F.Cu")
       (tedit 61D9008C)
-      (attr thru_hole)
+      (attr through_hole)
       ${p.at /* parametric position */}
       (fp_rect (start -8.89 10.5) (end 8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 116e44aa-10c6-4541-8b90-5b7a2f5434bd))
       (fp_rect (start 3.350197 -6.785813) (end 5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp a1111a45-eeef-42a4-8ca2-b88859685c82))
