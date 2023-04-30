@@ -17,11 +17,10 @@ module.exports = {
     D10: {type: 'net', value: 'D10'}
   },
   body: p => `
-    (module "xiao-tht" (version 20211014)
-      (layer "F.Cu")
-      (tedit 61D9008C)
-      (attr through_hole)
+    (module xiao-tht
+      (layer F.Cu)
       ${p.at /* parametric position */}
+      (attr through_hole)
       (fp_rect (start -8.89 10.5) (end 8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 116e44aa-10c6-4541-8b90-5b7a2f5434bd))
       (fp_rect (start 3.350197 -6.785813) (end 5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp a1111a45-eeef-42a4-8ca2-b88859685c82))
       (fp_rect (start -3.507811 -8.182813) (end -5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp a6f271d5-ba8a-454d-80cb-5f2f863f2343))
