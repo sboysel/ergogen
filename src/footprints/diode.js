@@ -1,13 +1,14 @@
 module.exports = {
     params: {
         designator: 'D',
+	smd: true,
+	tht: true,
         from: undefined,
         to: undefined
     },
-    body: p => `
-  
+    body: p => {
+	const standard = `
     (module ComboDiode (layer F.Cu) (tedit 5B24D78E)
-
 
         ${p.at /* parametric position */}
 
@@ -30,17 +31,38 @@ module.exports = {
         (fp_line (start -0.35 0) (end -0.35 0.55) (layer B.SilkS) (width 0.1))
         (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
-    
-        ${''/* SMD pads on both sides */}
-        (pad 1 smd rect (at -1.65 0 ${p.r}) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${p.to})
-        (pad 2 smd rect (at 1.65 0 ${p.r}) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${p.from})
-        (pad 1 smd rect (at -1.65 0 ${p.r}) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${p.to})
-        (pad 2 smd rect (at 1.65 0 ${p.r}) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${p.from})
-        
-        ${''/* THT terminals */}
-        (pad 1 thru_hole rect (at -3.81 0 ${p.r}) (size 1.778 1.778) (drill 0.9906) (layers *.Cu *.Mask) ${p.to})
-        (pad 2 thru_hole circle (at 3.81 0 ${p.r}) (size 1.905 1.905) (drill 0.9906) (layers *.Cu *.Mask) ${p.from})
-    )
-  
     `
+    const smd = `
+        ${''/* SMD pads on both sides */}
+        (pad 1 smd rect (at -1.65 0 ${p.rot}) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${p.to.str})
+        (pad 2 smd rect (at 1.65 0 ${p.rot}) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${p.from.str})
+        (pad 1 smd rect (at -1.65 0 ${p.rot}) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${p.to.str})
+        (pad 2 smd rect (at 1.65 0 ${p.rot}) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${p.from.str})
+    `
+    const tht = `
+	${''/* THT terminals */}
+        (pad 1 thru_hole rect (at -3.81 0 ${p.rot}) (size 1.778 1.778) (drill 0.9906) (layers *.Cu *.Mask) ${p.to.str})
+        (pad 2 thru_hole circle (at 3.81 0 ${p.rot}) (size 1.905 1.905) (drill 0.9906) (layers *.Cu *.Mask) ${p.from.str})
+    `
+    if(p.smd & p.tht) {
+	return `
+	${standard}
+	${smd}
+	${tht}
+	)
+	`
+    } else if(p.smd) {  
+	return `
+	${standard}
+	${smd}
+	)
+	`
+    } else if(p.tht) {
+	return `
+	${standard}
+	${tht}
+	)
+	`
+    } 
+  }
 }
