@@ -40,7 +40,8 @@
 //    | (1)            |
 //    | (1)            |
 //    |___(2)___(4)_(3)|
-
+//    stabilizers: default is true
+//      if true, will place stabilizer holes in the footprint.
 
 module.exports = {
   params: {
@@ -48,6 +49,7 @@ module.exports = {
     reverse: false,
     symmetric: false,
     cross: false,
+    stabilizers: true,
     A: undefined,
     B: undefined,
     C: undefined,
@@ -74,10 +76,14 @@ module.exports = {
 
       `
     function stabilizers(def_pos) {
-      return `
-        (pad "" np_thru_hole circle (at ${def_pos} 8.6) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))
-        (pad "" np_thru_hole circle (at ${def_pos} 1.6) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))
-      `
+      if(p.stabilizers) {
+        return `
+          (pad "" np_thru_hole circle (at ${def_pos} 8.6) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))
+          (pad "" np_thru_hole circle (at ${def_pos} 1.6) (size 1.5 1.5) (drill 1.5) (layers *.Cu *.Mask))
+        `
+      } else {
+        return ``
+      }
     }
     function pins(def_neg, def_pos, cross) {
       if(cross) {
