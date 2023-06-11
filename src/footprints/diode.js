@@ -34,29 +34,29 @@ module.exports = {
         (fp_line (start -0.35 0) (end -0.35 -0.55) (layer B.SilkS) (width 0.1))
         (fp_line (start -0.75 0) (end -0.35 0) (layer B.SilkS) (width 0.1))
 
-        ${ p.params.via_in_pad ?
+        ${ p.via_in_pad ?
             `
              ${''/* Vias in SMD pads */}   
-             (pad 1 thru_hole rect (at -1.65 0 ${ p.rot }) (size 0.9 1.2) (drill 0.3) (layers *.Cu *.Mask) (zone_connect 2) ${ p.params.to.str })
-             (pad 2 thru_hole rect (at 1.65 0 ${ p.rot }) (size 0.9 1.2) (drill 0.3) (layers *.Cu *.Mask) (zone_connect 2) ${ p.params.from.str })
+             (pad 1 thru_hole rect (at -1.65 0 ${ p.rot }) (size 0.9 1.2) (drill 0.3) (layers *.Cu *.Mask) (zone_connect 2) ${ p.to.str })
+             (pad 2 thru_hole rect (at 1.65 0 ${ p.rot }) (size 0.9 1.2) (drill 0.3) (layers *.Cu *.Mask) (zone_connect 2) ${ p.from.str })
             `
         :
             `
              ${ ''/* SMD pads on both sides */ }
-             (pad 1 smd rect (at -1.65 0 ${ p.rot }) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${ p.params.to.str })
-             (pad 2 smd rect (at 1.65 0 ${ p.rot }) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${ p.params.from.str })
-             (pad 1 smd rect (at -1.65 0 ${ p.rot }) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${ p.params.to.str })
-             (pad 2 smd rect (at 1.65 0 ${ p.rot }) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${ p.params.from.str })
+             (pad 1 smd rect (at -1.65 0 ${ p.rot }) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${ p.to.str })
+             (pad 2 smd rect (at 1.65 0 ${ p.rot }) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${ p.from.str })
+             (pad 1 smd rect (at -1.65 0 ${ p.rot }) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${ p.to.str })
+             (pad 2 smd rect (at 1.65 0 ${ p.rot }) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${ p.from.str })
             `
         }
         
-        ${ p.params.through_hole === false ?
+        ${ p.through_hole === false ?
             ''
         :
             `
              ${''/* THT terminals */}
-             (pad 1 thru_hole circle (at 3.81 0 ${ p.rot }) (size 1.905 1.905) (drill 0.9906) (layers *.Cu *.Mask) ${ p.params.from.str })
-             (pad 2 thru_hole rect (at -3.81 0 ${ p.rot }) (size 1.778 1.778) (drill 0.9906) (layers *.Cu *.Mask) ${ p.params.to.str })
+             (pad 1 thru_hole circle (at 3.81 0 ${ p.rot }) (size 1.905 1.905) (drill 0.9906) (layers *.Cu *.Mask) ${ p.from.str })
+             (pad 2 thru_hole rect (at -3.81 0 ${ p.rot }) (size 1.778 1.778) (drill 0.9906) (layers *.Cu *.Mask) ${ p.to.str })
             `
         }
 
