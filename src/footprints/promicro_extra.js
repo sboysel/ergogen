@@ -1,3 +1,4 @@
+// Source: https://gist.github.com/rrotter/e799afdaf804c9babb882488578c9525
 // Arduino ProMicro atmega32u4au
 // Params
 //  orientation: default is down
@@ -9,6 +10,8 @@ module.exports = {
     designator: 'MCU',
     orientation: 'down',
     type: 'promicro', // must be promicro, nicenano, or elitec
+    Bplus: {type: 'net', value: 'RAW'},
+    Bminus: {type: 'net', value: 'GND'},
     RAW: {type: 'net', value: 'RAW'},
     GND: {type: 'net', value: 'GND'},
     RST: {type: 'net', value: 'RST'},
@@ -68,7 +71,11 @@ module.exports = {
         // looks like we want to render a nice!nano
         xtra = `(pad 25 thru_hole circle (at 8.89 ${def_neg}5.08 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.NN_101.str})
         (pad 26 thru_hole circle (at 8.89 ${def_neg}2.54 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.NN_102.str})
-        (pad 27 thru_hole circle (at 8.89 0 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.NN_107.str})`
+        (pad 27 thru_hole circle (at 8.89 0 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.NN_107.str})
+        (fp_text user "B+" (at -16.51 ${def_pos}4.8 ${p.rot + 90}) (layer ${silk_layer}) (effects (font (size 0.8 0.8) (thickness 0.15)) ${font_effect}))
+        (fp_text user "B-" (at -16.51 ${def_neg}4.8 ${p.rot + 90}) (layer ${silk_layer}) (effects (font (size 0.8 0.8) (thickness 0.15)) ${font_effect}))
+        (pad 28 thru_hole roundrect (at -16.51 ${def_pos}7.62 0) (size 1.5 1.5) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (roundrect_rratio 0.25) ${p.Bplus.str})
+        (pad 29 thru_hole roundrect (at -16.51 ${def_neg}7.62 0) (size 1.5 1.5) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (roundrect_rratio 0.25) ${p.Bminus.str})`
       }
       else if (p.type == 'elitec'){
         xtra = `(pad 25 thru_hole circle (at 13.97 ${def_neg}5.08 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.EC_B7.str})
