@@ -10,8 +10,8 @@ module.exports = {
     designator: 'MCU',
     orientation: 'down',
     type: 'promicro', // must be promicro, nicenano, or elitec
-    Bplus: {type: 'net', value: 'RAW'},
-    Bminus: {type: 'net', value: 'GND'},
+    Bplus: {type: 'net', value: 'Bplus'},
+    Bminus: {type: 'net', value: 'Bminus'},
     RAW: {type: 'net', value: 'RAW'},
     GND: {type: 'net', value: 'GND'},
     RST: {type: 'net', value: 'RST'},
