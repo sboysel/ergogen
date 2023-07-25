@@ -138,7 +138,7 @@ module.exports = {
 
 
     }
-    if (p.param.orientation == 'down') {
+    if (p.orientation == 'down') {
       return `
         ${standard}
         ${pins('-', '')}
