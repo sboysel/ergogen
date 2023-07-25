@@ -77,7 +77,7 @@ module.exports = {
       (fp_line (start -14.224 -3.81) (end -14.224 3.81) (layer Dwgs.User) (width 0.15))
       `
     function pins(def_neg, def_pos) {
-      return !p.param.mirror ?
+      return !p.mirror ?
         `
         ${''/* and now the actual pins */}
         (pad 1 thru_hole rect (at -13.97 ${def_pos}7.62 ${p.rot}) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.BATP.str})
