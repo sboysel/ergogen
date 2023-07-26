@@ -7,6 +7,7 @@ module.exports = {
     diode: require('./diode'),
     drill: require('./drill'),
     elitec: require('./elitec'),
+    evqpua02k: require('./evqpua02k'),
     jstph: require('./jstph'),
     jumper: require('./jumper'),
     m2: require('./m2'),
