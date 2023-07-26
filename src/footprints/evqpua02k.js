@@ -1,7 +1,7 @@
 module.exports = {
     params: {
         designator: 'R', // for reset
-        type: 'smd', // 'smd' or 'thru_hole'
+        side: 'F',
         from: undefined,
         to: undefined
     },
@@ -12,32 +12,32 @@ module.exports = {
         ${p.at /* parametric position */}
         
         ${'' /* outline */}
-        (fp_line (start -2.4000000000 2.3500000000) (end -2.4000000000 -2.3500000000) (layer F.Fab) (width 0.15))
-        (fp_line (start -2.4000000000 -2.3500000000) (end 2.4000000000 -2.3500000000) (layer F.Fab) (width 0.15))
-        (fp_line (start 2.4000000000 -2.3500000000) (end 2.4000000000 2.3500000000) (layer F.Fab) (width 0.15))
-        (fp_line (start 2.4000000000 2.3500000000) (end -2.4000000000 2.3500000000) (layer F.Fab) (width 0.15))
-        (fp_circle (center 3.9750000000 -1.3500000000) (end 4.1000000000 -1.3500000000) (layer F.SilkS) (width 0.25))
-        (fp_line (start 3.4250000000 -2.3750000000) (end 3.4250000000 -2.3750000000) (layer F.CrtYd) (width 0.15))
-        (fp_line (start 3.4250000000 -2.3750000000) (end -3.4250000000 -2.3750000000) (layer F.CrtYd) (width 0.15))
-        (fp_line (start -3.4250000000 -2.3750000000) (end -3.4250000000 2.3750000000) (layer F.CrtYd) (width 0.15))
-        (fp_line (start -3.4250000000 2.3750000000) (end 3.4250000000 2.3750000000) (layer F.CrtYd) (width 0.15))
-        (fp_line (start 3.4250000000 2.3750000000) (end 3.4250000000 -2.3750000000) (layer F.CrtYd) (width 0.15))
-        (fp_line (start -2.4000000000 -2.3500000000) (end 2.4000000000 -2.3500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start 2.4000000000 -2.2250000000) (end 2.4000000000 -2.3500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start -2.4000000000 -2.2250000000) (end -2.4000000000 -2.3500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start -2.4000000000 1.2500000000) (end -1.3000000000 1.2500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start 2.4000000000 1.2500000000) (end 1.3000000000 1.2500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start -1.3000000000 1.2500000000) (end -1.3000000000 2.3500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start 1.3000000000 1.2500000000) (end 1.3000000000 2.3500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start -1.3000000000 2.3500000000) (end 1.3000000000 2.3500000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start -2.4000000000 1.2500000000) (end -2.4000000000 1.2250000000) (layer F.SilkS) (width 0.15))
-        (fp_line (start 2.4000000000 1.2500000000) (end 2.4000000000 1.2250000000) (layer F.SilkS) (width 0.15))
+        (fp_line (start -2.4000000000 2.3500000000) (end -2.4000000000 -2.3500000000) (layer ${p.side}.Fab) (width 0.15))
+        (fp_line (start -2.4000000000 -2.3500000000) (end 2.4000000000 -2.3500000000) (layer ${p.side}.Fab) (width 0.15))
+        (fp_line (start 2.4000000000 -2.3500000000) (end 2.4000000000 2.3500000000) (layer ${p.side}.Fab) (width 0.15))
+        (fp_line (start 2.4000000000 2.3500000000) (end -2.4000000000 2.3500000000) (layer ${p.side}.Fab) (width 0.15))
+        (fp_circle (center 3.9750000000 -1.3500000000) (end 4.1000000000 -1.3500000000) (layer ${p.side}.SilkS) (width 0.25))
+        (fp_line (start 3.4250000000 -2.3750000000) (end 3.4250000000 -2.3750000000) (layer ${p.side}.CrtYd) (width 0.15))
+        (fp_line (start 3.4250000000 -2.3750000000) (end -3.4250000000 -2.3750000000) (layer ${p.side}.CrtYd) (width 0.15))
+        (fp_line (start -3.4250000000 -2.3750000000) (end -3.4250000000 2.3750000000) (layer ${p.side}.CrtYd) (width 0.15))
+        (fp_line (start -3.4250000000 2.3750000000) (end 3.4250000000 2.3750000000) (layer ${p.side}.CrtYd) (width 0.15))
+        (fp_line (start 3.4250000000 2.3750000000) (end 3.4250000000 -2.3750000000) (layer ${p.side}.CrtYd) (width 0.15))
+        (fp_line (start -2.4000000000 -2.3500000000) (end 2.4000000000 -2.3500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start 2.4000000000 -2.2250000000) (end 2.4000000000 -2.3500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start -2.4000000000 -2.2250000000) (end -2.4000000000 -2.3500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start -2.4000000000 1.2500000000) (end -1.3000000000 1.2500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start 2.4000000000 1.2500000000) (end 1.3000000000 1.2500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start -1.3000000000 1.2500000000) (end -1.3000000000 2.3500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start 1.3000000000 1.2500000000) (end 1.3000000000 2.3500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start -1.3000000000 2.3500000000) (end 1.3000000000 2.3500000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start -2.4000000000 1.2500000000) (end -2.4000000000 1.2250000000) (layer ${p.side}.SilkS) (width 0.15))
+        (fp_line (start 2.4000000000 1.2500000000) (end 2.4000000000 1.2250000000) (layer ${p.side}.SilkS) (width 0.15))
 
         ${'' /* pins */}
-        (pad 1 ${p.type} rect (at 2.6250000000 -1.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers *.Mask *.Cu) ${p.from.str})
-        (pad 3 ${p.type} rect (at -2.6250000000 -1.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers *.Mask *.Cu) ${p.to.str})
-        (pad 2 ${p.type} rect (at 2.6250000000 0.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers *.Mask *.Cu) ${p.from.str})
-        (pad 4 ${p.type} rect (at -2.6250000000 0.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers *.Mask *.Cu) ${p.to.str})
+        (pad 1 smd rect (at 2.6250000000 -1.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers ${p.side}.Cu ${p.side}.Paste ${p.side}.Mask) ${p.from.str})
+        (pad 3 smd rect (at -2.6250000000 -1.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers ${p.side}.Cu ${p.side}.Paste ${p.side}.Mask) ${p.to.str})
+        (pad 2 smd rect (at 2.6250000000 0.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers ${p.side}.Cu ${p.side}.Paste ${p.side}.Mask) ${p.from.str})
+        (pad 4 smd rect (at -2.6250000000 0.3500000000 ${p.rot})(size 1.5500000000 1.0000000000)(layers ${p.side}.Cu ${p.side}.Paste ${p.side}.Mask) ${p.to.str})
 
     )
 
