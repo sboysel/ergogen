@@ -47,7 +47,7 @@ module.exports = {
       (pad "11" thru_hole oval (at 7.62 0 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.D10.str})
       (pad "12" thru_hole oval (at 7.62 -2.54 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p._3V3.str})
       (pad "13" thru_hole oval (at 7.62 -5.08 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.GND.str})
-      (pad "14" thru_hole oval (at 7.62 -7.62 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p._5v.str})
+      (pad "14" thru_hole oval (at 7.62 -7.62 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p._5V.str})
       (pad "15" thru_hole circle (at -1.27 -8.572 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.DIO.str})
       (pad "16" thru_hole circle (at 1.27 -8.572 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.CLK.str})
       (pad "17" thru_hole circle (at -1.27 -6.032 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.RST.str})
