@@ -35,4 +35,5 @@ module.exports = {
     via: require('./via'),
     weact_pi_pico: require('./weact_pi_pico'),
     xiao: require('./xiao'),
+    xiao_ble: require('./xiao_ble'),
 }
