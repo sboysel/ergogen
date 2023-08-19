@@ -11,8 +11,8 @@ module.exports = {
       (attr through_hole)
       ${p.at /* parametric position */}
       (pad N1 thru_hole circle (at 0.0 0.0) (size 17.8 17.8) (layers *.Cu *.Mask) ${p.neg.str})
-      (pad P1 thru_hole rect (at -11.45 0.0) (size 2.5 5.1) (layers *.Cu *.Mask *.Paste) ${p.neg.str})
-      (pad P2 thru_hole rect (at 11.45 0.0) (size 2.5 5.1) (layers *.Cu *.Mask *.Paste) ${p.neg.str})
+      (pad P1 thru_hole rect (at -11.45 0.0) (size 2.5 5.1) (layers *.Cu *.Mask *.Paste) ${p.pos.str})
+      (pad P2 thru_hole rect (at 11.45 0.0) (size 2.5 5.1) (layers *.Cu *.Mask *.Paste) ${p.pos.str})
       (fp_line (start -10.55 -7.55) (end 10.55 -7.55) (layer F.Fab) (width 0.127))
       (fp_line (start 10.55 -7.55) (end 10.55 7.95) (layer F.Fab) (width 0.127))
       (fp_line (start 10.55 7.95) (end 5.5 7.95) (layer F.Fab) (width 0.127))
