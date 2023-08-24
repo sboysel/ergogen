@@ -50,7 +50,6 @@ module.exports = {
         (pad 20 thru_hole oval (at 0 24.13) (size 1.84 1.7) (drill oval 1.16 1.02) (layers *.Cu *.Mask) (tstamp 4b6b7c47-5e11-4065-b26e-9c14c9c8ee50) ${p.GP15.str})
       )
       `
-    }
   }
 }
 
