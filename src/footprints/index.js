@@ -20,6 +20,7 @@ module.exports = {
     oled: require('./oled'),
     omron: require('./omron'),
     pad: require('./pad'),
+    pi_pico_left: require('./pi_pico_left'),
     promicro: require('./promicro'),
     promicro_extra: require('./promicro_extra'),
     promicro_pretty: require('./promicro_pretty'),
