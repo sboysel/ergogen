@@ -61,8 +61,8 @@ module.exports = {
         (pad 22 thru_hole roundrect (at ${def_neg}7.62 -7.62 ${p.rot}) (size 2.5 1.5) (drill 1 (offset ${def_neg}0.5 0)) (layers *.Cu *.Mask) (roundrect_rratio 0.2) ${p.GND.str})
         (pad 23 thru_hole roundrect (at ${def_neg}7.62 -10.16 ${p.rot}) (size 2.5 1.5) (drill 1 (offset ${def_neg}0.5 0)) (layers *.Cu *.Mask) (roundrect_rratio 0.2) ${p._5V.str})
         
-        (fp_circle (center 10.5 -10.16) (end 10.75 -10.16) (layer F.SilkS) (width 0.25) (fill solid))
-        (fp_circle (center 10.5 -10.16) (end 10.75 -10.16) (layer B.SilkS) (width 0.25) (fill solid))
+        (fp_circle (center ${def_neg}10.5 -10.16) (end ${def_neg}10.75 -10.16) (layer F.SilkS) (width 0.25) (fill solid))
+        (fp_circle (center ${def_neg}10.5 -10.16) (end ${def_neg}10.75 -10.16) (layer B.SilkS) (width 0.25) (fill solid))
 
       `
     }
