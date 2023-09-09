@@ -2,6 +2,7 @@ module.exports = {
     params: {
         designator: 'T', // for Toggle
         side: 'F',
+        silkscreen: true, 
         from: undefined,
         to: undefined
     },
@@ -10,16 +11,7 @@ module.exports = {
         const left = p.side == 'F' ? '-' : ''
         const right = p.side == 'F' ? '' : '-'
 
-        return `
-        
-        (module E73:SPDT_C128955 (layer F.Cu) (tstamp 5BF2CC3C)
-
-            ${p.at /* parametric position */}
-
-            ${'' /* footprint reference */}
-            (fp_text reference "${p.ref}" (at 0 0) (layer F.SilkS) ${p.ref_hide} (effects (font (size 1.27 1.27) (thickness 0.15))))
-            (fp_text value "" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
-            
+        const silkscreen = `
             ${'' /* outline */}
             (fp_line (start 1.95 -1.35) (end -1.95 -1.35) (layer ${p.side}.SilkS) (width 0.15))
             (fp_line (start 0 -1.35) (end -3.3 -1.35) (layer ${p.side}.SilkS) (width 0.15))
@@ -27,6 +19,15 @@ module.exports = {
             (fp_line (start -3.3 1.5) (end 3.3 1.5) (layer ${p.side}.SilkS) (width 0.15))
             (fp_line (start 3.3 1.5) (end 3.3 -1.35) (layer ${p.side}.SilkS) (width 0.15))
             (fp_line (start 0 -1.35) (end 3.3 -1.35) (layer ${p.side}.SilkS) (width 0.15))
+        `
+
+        return `
+        
+        (module E73:SPDT_C128955 (layer F.Cu) (tstamp 5BF2CC3C)
+
+            ${p.at /* parametric position */}
+            
+            ${p.silkscreen ? silkscreen : ''} 
             
             ${'' /* extra indicator for the slider */}
             (fp_line (start -1.95 -3.85) (end 1.95 -3.85) (layer Dwgs.User) (width 0.15))
