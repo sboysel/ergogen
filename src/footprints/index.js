@@ -11,6 +11,7 @@ module.exports = {
     evqpua02k: require('./evqpua02k'),
     jstph: require('./jstph'),
     jumper: require('./jumper'),
+    ks33: require('./ks33'),
     led_sk6812_minie: require('./led_sk6812_minie'),
     m2: require('./m2'),
     molex_441440003: require('./molex_441440003'),
