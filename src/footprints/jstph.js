@@ -18,7 +18,7 @@ module.exports = {
           ${p.at /* parametric position */}
           (pad 1 thru_hole oval (at -2 0 ${p.rot}) (size 1.2 1.7) (drill 0.75) (layers *.Cu *.Mask) ${p.neg.str})
           (pad 2 thru_hole rect (at 0 0 ${p.rot}) (size 1.2 1.7) (drill 0.75) (layers *.Cu *.Mask) ${p.pos.str})
-          ${p.symmatric ? extra_neg : ''} 
+          ${p.symmetric ? extra_neg : ''} 
       )
       `
     }
