@@ -3,6 +3,9 @@
 // https://github.com/crides/kleeb/blob/master/mcu.pretty/xiao-ble-tht.kicad_mod 
 module.exports = {
   params: {
+    rst_pins: true,
+    battery_pins: true,
+    nfc_pins: true,
     _5V: {type: 'net', value: '5V'},
     GND: {type: 'net', value: 'GND'},
     _3V3: {type: 'net', value: '3V3'},
@@ -24,7 +27,24 @@ module.exports = {
     BATN: {type: 'net', value: 'BAT-'},
     NFC: {type: 'net', value: 'NFC'}
   },
-  body: p => `
+  body: p => {
+    const rst_pins = `
+      (pad "15" thru_hole circle (at -1.27 -8.572 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.DIO.str})
+      (pad "16" thru_hole circle (at 1.27 -8.572 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.CLK.str})
+      (pad "17" thru_hole circle (at -1.27 -6.032 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.RST.str})
+      (pad "18" thru_hole circle (at 1.27 -6.032 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.GND.str})
+    `
+
+    const battery_pins = `
+      (pad "19" thru_hole circle (at -4.445 -0.317 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATP.str})
+      (pad "20" thru_hole circle (at -4.445 -2.222 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATN.str})
+    `
+    const nfc_pins = `
+      (pad "21" thru_hole circle (at 3.81 9.208 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.NFC.str})
+      (pad "22" thru_hole circle (at 5.715 9.208 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.NFC.str})
+    `
+    
+    return `
     (module "xiao-ble-tht"
       (layer "F.Cu")
       ${p.at /* parametric position */}
@@ -48,16 +68,14 @@ module.exports = {
       (pad "12" thru_hole oval (at 7.62 -2.54 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p._3V3.str})
       (pad "13" thru_hole oval (at 7.62 -5.08 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p.GND.str})
       (pad "14" thru_hole oval (at 7.62 -7.62 ${p.rot + 180}) (size 2.75 1.8) (drill 1 (offset -0.475 0)) (layers *.Cu *.Mask) ${p._5V.str})
-      (pad "15" thru_hole circle (at -1.27 -8.572 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.DIO.str})
-      (pad "16" thru_hole circle (at 1.27 -8.572 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.CLK.str})
-      (pad "17" thru_hole circle (at -1.27 -6.032 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.RST.str})
-      (pad "18" thru_hole circle (at 1.27 -6.032 ${p.rot + 90}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.GND.str})
-      (pad "19" thru_hole circle (at -4.445 -0.317 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATP.str})
-      (pad "20" thru_hole circle (at -4.445 -2.222 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATN.str})
-      (pad "21" thru_hole circle (at 3.81 9.208 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.NFC.str})
-      (pad "22" thru_hole circle (at 5.715 9.208 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.NFC.str})
+      ${p.rst_pins ? rst_pins : ''} 
+      ${p.battery_pins ? battery_pins : ''} 
+      ${p.nfc_pins ? nfc_pins : ''} 
     )
     `
+  } 
+  
+  
 }
     
 
