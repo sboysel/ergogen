@@ -38,6 +38,7 @@ module.exports = {
     const battery_pins = `
       (pad "19" thru_hole circle (at -4.445 -0.317 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATP.str})
       (pad "20" thru_hole circle (at -4.445 -2.222 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATN.str})
+      (fp_rect (start -4.445 -0.317) (end -2.445 -2.222) (layer "Edge.Cuts") (width 0.12) (fill none)) 
     `
     const nfc_pins = `
       (pad "21" thru_hole circle (at 3.81 9.208 ${p.rot + 180}) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.NFC.str})
