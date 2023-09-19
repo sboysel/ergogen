@@ -40,4 +40,5 @@ module.exports = {
     weact_pi_pico: require('./weact_pi_pico'),
     xiao: require('./xiao'),
     xiao_ble: require('./xiao_ble'),
+    xiao_ble_smd_reversible: require('./xiao_ble_smd_reversible'),
 }
