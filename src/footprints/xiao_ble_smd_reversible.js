@@ -3,9 +3,6 @@
 // https://github.com/crides/kleeb/blob/master/mcu.pretty/xiao-ble-tht.kicad_mod 
 module.exports = {
   params: {
-    _5V: {type: 'net', value: '5V'},
-    GND: {type: 'net', value: 'GND'},
-    _3V3: {type: 'net', value: '3V3'},
     D0: {type: 'net', value: 'D0'},
     D1: {type: 'net', value: 'D1'},
     D2: {type: 'net', value: 'D2'},
@@ -17,8 +14,10 @@ module.exports = {
     D8: {type: 'net', value: 'D8'},
     D9: {type: 'net', value: 'D9'},
     D10: {type: 'net', value: 'D10'},
-    DIO: {type: 'net', value: 'DIO'},
-    CLK: {type: 'net', value: 'CLK'},
+    _3V3: {type: 'net', value: '3V3'},
+    GND: {type: 'net', value: 'GND'},
+    _5V: {type: 'net', value: '5V'},
+    RST: {type: 'net', value: 'RST'},
     BATP: {type: 'net', value: 'BAT+'}
   },
   body: p => `
