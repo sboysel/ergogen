@@ -26,6 +26,18 @@ module.exports = {
       (layer "F.Cu")
       ${p.at /* parametric position */}
       (attr smd exclude_from_pos_files)
+
+      (fp_rect (start -3.350197 -6.785813) (end -5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 06bccb0b-2f4b-4092-834b-3871294199da))
+      (fp_rect (start 3.350197 -6.785813) (end 5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 2415f537-fa6d-4c04-bd97-00b9f7ab939d))
+      (fp_rect (start 3.507811 -8.182813) (end 5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 32a2f93b-16df-4770-bc80-527fdb2ae15f))
+      (fp_rect (start -3.350197 -10.849813) (end -5.128197 -8.182813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 4f5c185a-e11b-4d82-a8bc-b9689c9c633b))
+      (fp_rect (start 3.350197 -10.849813) (end 5.128197 -8.182813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 5b77bfad-fdd5-4e7d-86ed-ad21fd1ee4e0))
+      (fp_rect (start -5.285811 -6.785813) (end -3.507811 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 6a787b26-86fe-4c4f-b92f-6381c95ee933))
+      (fp_rect (start 8.89 10.5) (end -8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 73cb09ad-e380-49f3-bc9d-038b1104bc93))
+      (fp_rect (start -8.89 10.5) (end 8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 98155800-78e7-48e2-b416-a5948d22b132))
+      (fp_rect (start -3.507811 -8.182813) (end -5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp d6707dd1-1c60-4d7e-8bf8-d81571e173bf))
+      (fp_rect (start 5.285811 -6.785813) (end 3.507811 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp e701a39e-8bd3-440b-8d4a-26c336209834))
+
       (pad "1" smd oval (at 8.56996 -7.62 180) (size 2.75 1.8) (drill (offset 0.475 0)) (layers "B.Cu" "B.Paste" "B.Mask") ${p.D0.str})
       (pad "1" smd oval (at -8.56996 -7.62 180) (size 2.75 1.8) (drill (offset -0.475 0)) (layers "F.Cu" "F.Paste" "F.Mask") ${p.D0.str})
       (pad "2" smd oval (at -8.56996 -5.08 180) (size 2.75 1.8) (drill (offset -0.475 0)) (layers "F.Cu" "F.Paste" "F.Mask") ${p.D1.str})
@@ -54,8 +66,8 @@ module.exports = {
       (pad "13" smd oval (at -8.56996 -5.08) (size 2.75 1.8) (drill (offset 0.475 0)) (layers "B.Cu" "B.Paste" "B.Mask") ${p.GND.str})
       (pad "14" smd oval (at -8.56996 -7.62) (size 2.75 1.8) (drill (offset 0.475 0)) (layers "B.Cu" "B.Paste" "B.Mask") ${p._5V.str})
       (pad "14" smd oval (at 8.56996 -7.62) (size 2.75 1.8) (drill (offset -0.475 0)) (layers "F.Cu" "F.Paste" "F.Mask") ${p._5V.str})
-      (pad "17" thru_hole circle (at -1.27 -6.032 90) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.DIO.str})
-      (pad "18" thru_hole circle (at 1.27 -6.032 270) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.CLK.str})
+      (pad "17" thru_hole circle (at -1.27 -6.032 90) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.GND.str})
+      (pad "18" thru_hole circle (at 1.27 -6.032 270) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.RST.str})
       (pad "19" thru_hole circle (at 4.445 -0.317 180) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.BATP.str})
       (pad "19" thru_hole circle (at -4.445 -0.317 180) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.BATP.str})
     )
@@ -63,16 +75,6 @@ module.exports = {
 }
    
 
-      // (fp_rect (start -3.350197 -6.785813) (end -5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 06bccb0b-2f4b-4092-834b-3871294199da))
-      // (fp_rect (start 3.350197 -6.785813) (end 5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 2415f537-fa6d-4c04-bd97-00b9f7ab939d))
-      // (fp_rect (start 3.507811 -8.182813) (end 5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 32a2f93b-16df-4770-bc80-527fdb2ae15f))
-      // (fp_rect (start -3.350197 -10.849813) (end -5.128197 -8.182813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 4f5c185a-e11b-4d82-a8bc-b9689c9c633b))
-      // (fp_rect (start 3.350197 -10.849813) (end 5.128197 -8.182813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 5b77bfad-fdd5-4e7d-86ed-ad21fd1ee4e0))
-      // (fp_rect (start -5.285811 -6.785813) (end -3.507811 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 6a787b26-86fe-4c4f-b92f-6381c95ee933))
-      // (fp_rect (start 8.89 10.5) (end -8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 73cb09ad-e380-49f3-bc9d-038b1104bc93))
-      // (fp_rect (start -8.89 10.5) (end 8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp 98155800-78e7-48e2-b416-a5948d22b132))
-      // (fp_rect (start -3.507811 -8.182813) (end -5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp d6707dd1-1c60-4d7e-8bf8-d81571e173bf))
-      // (fp_rect (start 5.285811 -6.785813) (end 3.507811 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none) (tstamp e701a39e-8bd3-440b-8d4a-26c336209834))
       // (fp_line (start -1.27 -2.984) (end 1.27 -2.984) (layer "Edge.Cuts") (width 0.12) (tstamp 2dd9a5be-3aa9-4cf6-850b-b3df04cedb00))
       // (fp_line (start -1.778 -6.032) (end -1.778 -3.492) (layer "Edge.Cuts") (width 0.12) (tstamp 56ff2288-13d4-4098-a5c7-84a24b2613d1))
       // (fp_line (start 4.953 -0.317) (end 4.953 2.223) (layer "Edge.Cuts") (width 0.12) (tstamp 5b55646c-afd9-4127-85d7-7d899753820b))
