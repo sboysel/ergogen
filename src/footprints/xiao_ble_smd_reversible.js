@@ -22,18 +22,10 @@ module.exports = {
     BATP: {type: 'net', value: 'BAT+'}
   },
   body: p => `
-    (module "xiao-ble-smd-reversible" (version 20211014) (generator pcbnew)
+    (module "xiao-ble-smd-reversible"
       (layer "F.Cu")
-      (attr smd exclude_from_pos_files)
       ${p.at /* parametric position */}
-      (fp_text reference "U1" (at -19.3989 -11.28268) (layer "F.SilkS") hide
-        (effects (font (size 0.889 0.889) (thickness 0.1016)))
-        (tstamp 88071c39-7478-4d42-a0c9-ea227d61f16f)
-      )
-      (fp_text value "xiao-ble-thruhole" (at -19.8434 -0.29718) (layer "F.SilkS") hide
-        (effects (font (size 0.6096 0.6096) (thickness 0.0762)))
-        (tstamp fb9b0b15-c800-4199-a9df-1e999ba6a70c)
-      )
+      (attr smd exclude_from_pos_files)
       (fp_rect (start -3.350197 -6.785813) (end -5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none))
       (fp_rect (start 3.350197 -6.785813) (end 5.128197 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none))
       (fp_rect (start 3.507811 -8.182813) (end 5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none))
@@ -44,6 +36,26 @@ module.exports = {
       (fp_rect (start -8.89 10.5) (end 8.89 -10.5) (layer "Dwgs.User") (width 0.12) (fill none))
       (fp_rect (start -3.507811 -8.182813) (end -5.285811 -10.849813) (layer "Dwgs.User") (width 0.12) (fill none))
       (fp_rect (start 5.285811 -6.785813) (end 3.507811 -4.118813) (layer "Dwgs.User") (width 0.12) (fill none))
+      (fp_line (start -1.27 -2.984) (end 1.27 -2.984) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start -1.778 -6.032) (end -1.778 -3.492) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start 4.953 -0.317) (end 4.953 2.223) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start -2.921 2.731) (end -4.445 2.731) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start 2.921 2.731) (end 4.445 2.731) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start -2.921 -0.317) (end -4.953 -0.317) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start -4.953 -0.317) (end -4.953 2.223) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start 2.413 0.191) (end 2.413 2.223) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start 2.921 -0.317) (end 4.953 -0.317) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start -2.413 0.191) (end -2.413 2.223) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start 1.778 -6.032) (end 1.778 -3.492) (layer "Edge.Cuts") (width 0.12))
+      (fp_line (start -1.778 -6.032) (end 1.778 -6.032) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start 1.778 -3.492) (mid 1.62921 -3.13279) (end 1.27 -2.984) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start 2.921 2.731) (mid 2.56179 2.58221) (end 2.413 2.223) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start -2.921 -0.317) (mid -2.56179 -0.16821) (end -2.413 0.191) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start -4.445 2.731) (mid -4.80421 2.58221) (end -4.953 2.223) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start 2.413 0.191) (mid 2.56179 -0.16821) (end 2.921 -0.317) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start -1.27 -2.984) (mid -1.62921 -3.13279) (end -1.778 -3.492) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start -2.413 2.223) (mid -2.56179 2.58221) (end -2.921 2.731) (layer "Edge.Cuts") (width 0.12))
+      (fp_arc (start 4.953 2.223) (mid 4.80421 2.58221) (end 4.445 2.731) (layer "Edge.Cuts") (width 0.12))
       (pad "1" smd oval (at 8.56996 -7.62 180) (size 2.75 1.8) (drill (offset 0.475 0)) (layers "B.Cu" "B.Paste" "B.Mask") ${p.D0.str})
       (pad "1" smd oval (at -8.56996 -7.62 180) (size 2.75 1.8) (drill (offset -0.475 0)) (layers "F.Cu" "F.Paste" "F.Mask") ${p.D0.str})
       (pad "2" smd oval (at -8.56996 -5.08 180) (size 2.75 1.8) (drill (offset -0.475 0)) (layers "F.Cu" "F.Paste" "F.Mask") ${p.D1.str})
@@ -81,24 +93,4 @@ module.exports = {
 }
    
 
-      // (fp_line (start -1.27 -2.984) (end 1.27 -2.984) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start -1.778 -6.032) (end -1.778 -3.492) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start 4.953 -0.317) (end 4.953 2.223) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start -2.921 2.731) (end -4.445 2.731) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start 2.921 2.731) (end 4.445 2.731) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start -2.921 -0.317) (end -4.953 -0.317) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start -4.953 -0.317) (end -4.953 2.223) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start 2.413 0.191) (end 2.413 2.223) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start 2.921 -0.317) (end 4.953 -0.317) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start -2.413 0.191) (end -2.413 2.223) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start 1.778 -6.032) (end 1.778 -3.492) (layer "Edge.Cuts") (width 0.12))
-      // (fp_line (start -1.778 -6.032) (end 1.778 -6.032) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start 1.778 -3.492) (mid 1.62921 -3.13279) (end 1.27 -2.984) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start 2.921 2.731) (mid 2.56179 2.58221) (end 2.413 2.223) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start -2.921 -0.317) (mid -2.56179 -0.16821) (end -2.413 0.191) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start -4.445 2.731) (mid -4.80421 2.58221) (end -4.953 2.223) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start 2.413 0.191) (mid 2.56179 -0.16821) (end 2.921 -0.317) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start -1.27 -2.984) (mid -1.62921 -3.13279) (end -1.778 -3.492) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start -2.413 2.223) (mid -2.56179 2.58221) (end -2.921 2.731) (layer "Edge.Cuts") (width 0.12))
-      // (fp_arc (start 4.953 2.223) (mid 4.80421 2.58221) (end 4.445 2.731) (layer "Edge.Cuts") (width 0.12))
 
