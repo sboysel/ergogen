@@ -22,7 +22,7 @@ module.exports = {
     BATP: {type: 'net', value: 'BAT+'}
   },
   body: p => `
-    (module "xiao-ble-smd-reversible" (version 20211014)
+    (module "xiao-ble-smd-reversible" (version 20211014) (generator pcbnew)
       (layer "F.Cu")
       (attr smd exclude_from_pos_files)
       ${p.at /* parametric position */}
