@@ -84,10 +84,10 @@ module.exports = {
       (pad "13" smd oval (at -8.56996 -5.08) (size 2.75 1.8) (drill (offset 0.475 0)) (layers "B.Cu" "B.Paste" "B.Mask") ${p.GND.str})
       (pad "14" smd oval (at -8.56996 -7.62) (size 2.75 1.8) (drill (offset 0.475 0)) (layers "B.Cu" "B.Paste" "B.Mask") ${p._5V.str})
       (pad "14" smd oval (at 8.56996 -7.62) (size 2.75 1.8) (drill (offset -0.475 0)) (layers "F.Cu" "F.Paste" "F.Mask") ${p._5V.str})
-      (pad "17" thru_hole circle (at -1.27 -6.032 90) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.DIO.str})
-      (pad "18" thru_hole circle (at 1.27 -6.032 270) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.CLK.str})
-      (pad "19" thru_hole circle (at 4.445 -0.317 180) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.BATP.str})
-      (pad "19" thru_hole circle (at -4.445 -0.317 180) (size 1.397 1.397) (drill 1.016) (property pad_prop_castellated) (layers *.Cu *.Mask) ${p.BATP.str})
+      (pad "17" thru_hole circle (at -1.27 -6.032 90) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.DIO.str})
+      (pad "18" thru_hole circle (at 1.27 -6.032 270) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.CLK.str})
+      (pad "19" thru_hole circle (at 4.445 -0.317 180) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATP.str})
+      (pad "19" thru_hole circle (at -4.445 -0.317 180) (size 1.397 1.397) (drill 1.016) (layers *.Cu *.Mask) ${p.BATP.str})
     )
     `
 }
