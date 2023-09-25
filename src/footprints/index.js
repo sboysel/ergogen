@@ -41,4 +41,5 @@ module.exports = {
     xiao: require('./xiao'),
     xiao_ble: require('./xiao_ble'),
     xiao_ble_smd_reversible: require('./xiao_ble_smd_reversible'),
+    xiao_smd_reversible: require('./xiao_smd_reversible'),
 }
