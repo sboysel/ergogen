@@ -51,7 +51,7 @@ module.exports = {
       `
     const keycap = `
       ${'' /* keycap marks */}
-      (fp_rect (start -${kx / 2} ${ky / 2}) (end ${kx / 2} -${ky / 2}) (layer Dwgs.User) (width 0.15))
+      (fp_rect (start -${p.kx / 2} ${p.ky / 2}) (end ${p.kx / 2} -${p.ky / 2}) (layer Dwgs.User) (width 0.15))
     `
     function pins(def_neg, def_pos, def_side) {
       if(p.hotswap) {
