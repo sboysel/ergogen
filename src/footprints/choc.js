@@ -18,8 +18,8 @@ module.exports = {
     hotswap: false,
     reverse: false,
     keycaps: false,
-    kx: 18,
-    ky: 17,
+    kx: kx,
+    ky: ky,
     from: undefined,
     to: undefined
   },
