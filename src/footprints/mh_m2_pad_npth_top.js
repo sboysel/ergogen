@@ -14,14 +14,7 @@ module.exports = {
       (tags "mounting hole 3mm")
       (attr smd)
       ${p.at /* parametric position */}
-      (fp_text reference "${p.ref}" (at 0 -4) (layer "F.SilkS") ${p.ref_hide}
-        (effects (font (size 1 1) (thickness 0.15)))
-        (tstamp fc3fa9a1-422b-45a5-9761-badff137a9d2)
-      )
-      (fp_text value "MountingHole_3mm_Pad_NonPTH_TopOnly" (at 0 4) (layer "F.Fab")
-        (effects (font (size 1 1) (thickness 0.15)))
-        (tstamp 0c22d126-85dd-46ae-bcd9-a3e8c01f625a)
-      )
+
       (fp_circle (center 2.47 0) (end 2.97 0) (layer "F.Paste") (width 0.12) (fill solid) (tstamp 12304338-07fa-4c62-a66a-904af1e09b36))
       (fp_circle (center 0 -2.47) (end 0.5 -2.47) (layer "F.Paste") (width 0.12) (fill solid) (tstamp 2861e045-b35c-4679-bc75-5ecf9f36e964))
       (fp_circle (center -2.139083 -1.235) (end -1.639083 -1.235) (layer "F.Paste") (width 0.12) (fill solid) (tstamp 3273c2fa-6a26-4557-b3d7-8ce49c19ac76))
@@ -41,5 +34,14 @@ module.exports = {
       (pad "1" smd circle (at 0 0) (size 6.1 6.1) (layers "F.Cu" "F.Mask") (tstamp a69e605a-9052-440f-bcc9-68da52cfa154))
     )`
 }
+
+      // (fp_text reference "${p.ref}" (at 0 -4) (layer "F.SilkS") ${p.ref_hide}
+      //   (effects (font (size 1 1) (thickness 0.15)))
+      //   (tstamp fc3fa9a1-422b-45a5-9761-badff137a9d2)
+      // )
+      // (fp_text value "MountingHole_3mm_Pad_NonPTH_TopOnly" (at 0 4) (layer "F.Fab")
+      //   (effects (font (size 1 1) (thickness 0.15)))
+      //   (tstamp 0c22d126-85dd-46ae-bcd9-a3e8c01f625a)
+      // )
 
 
