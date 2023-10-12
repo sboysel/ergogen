@@ -14,6 +14,7 @@ module.exports = {
     ks33: require('./ks33'),
     led_sk6812_minie: require('./led_sk6812_minie'),
     m2: require('./m2'),
+    mh_m2_pad_npth_top: require('./mh_m2_pad_npth_top'),
     molex_441440003: require('./molex_441440003'),
     molex_441440005: require('./molex_441440005'),
     mountinghole: require('./mountinghole'),
