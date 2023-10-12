@@ -7,12 +7,7 @@ module.exports = {
         class: 'HOLE',
     },
     body: p => `
-    (module "MountingHole_M2_Pad_NonPTH_TopOnly" (version 20211014) (generator pcbnew)
-      (layer "F.Cu")
-      (tedit 56D1B4CB)
-      (descr "Mounting Hole 3mm")
-      (tags "mounting hole 3mm")
-      (attr smd)
+    (module "MountingHole_M2_Pad_NonPTH_TopOnly" 
       ${p.at /* parametric position */}
 
       (fp_circle (center 2.47 0) (end 2.97 0) (layer "F.Paste") (width 0.12) (fill solid) (tstamp 12304338-07fa-4c62-a66a-904af1e09b36))
