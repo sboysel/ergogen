@@ -4,6 +4,7 @@ module.exports = {
     blackpill: require('./blackpill'),
     button: require('./button'),
     choc: require('./choc'),
+    choc_hotswap_solder: require('./choc_hotswap_solder'),
     chocmini: require('./chocmini'),
     diode: require('./diode'),
     drill: require('./drill'),
