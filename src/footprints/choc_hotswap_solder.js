@@ -9,7 +9,7 @@ module.exports = {
     return `
     (module Kailh_socket_PG1350_optional (layer F.Cu) (tedit 5DD50F3F)
       ${p.at /* parametric position */}
-      (descr "Kailh \"Choc\" PG1350 keyswitch with optional socket mount")
+      (descr "Kailh Choc PG1350 keyswitch with optional socket mount")
       (tags kailh,choc)
       (fp_text reference ${p.ref} (at 0 -8.255) (layer F.SilkS)
         (effects (font (size 1 1) (thickness 0.15)))
