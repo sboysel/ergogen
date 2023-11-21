@@ -7,21 +7,13 @@ module.exports = {
   },
   body: p => {
     return `
-      (module "gateron-ks27-reversible" (version 20211014) (generator pcbnew)
+      (module "gateron-ks27-reversible"
         (layer "F.Cu")
-        (tedit 6259DA75)
+        
         (attr through_hole)
 
         ${p.at /* parametric position */}  
   
-        (fp_text reference "REF**" (at 0.1 -8.5 unlocked) (layer "F.SilkS")
-          (effects (font (size 1 1) (thickness 0.15)))
-          (tstamp 4c9fdea7-ba0c-45cc-8f66-240980c37d5c)
-        )
-        (fp_text value "gateron-ks27-reversible" (at 0 8.5 unlocked) (layer "F.Fab")
-          (effects (font (size 1 1) (thickness 0.15)))
-          (tstamp c58960d9-4cac-4036-ad2e-1aef26946dae)
-        )
         (fp_line (start 1.8 -6.3) (end -3.2 -6.3) (layer "Eco2.User") (width 0.12) (tstamp 21ae9c3a-7138-444e-be38-56a4842ab594))
         (fp_line (start -7 -7) (end -7 7) (layer "Eco2.User") (width 0.12) (tstamp 632acde9-b7fd-4f04-8cb4-d2cbb06b3595))
         (fp_line (start 7 7) (end 7 -7) (layer "Eco2.User") (width 0.12) (tstamp 67621f9e-0a6a-4778-ad69-04dcf300659c))
@@ -34,7 +26,7 @@ module.exports = {
         (fp_line (start -7.5 -7.5) (end -7.5 7.5) (layer "F.Fab") (width 0.1) (tstamp 786b6072-5772-4bc1-8eeb-6c4e19f2a91b))
         (fp_line (start -7.5 7.5) (end 7.5 7.5) (layer "F.Fab") (width 0.1) (tstamp c3c93de0-69b1-4a04-8e0b-d78caf487c63))
         (fp_line (start 7.5 -7.5) (end -7.5 -7.5) (layer "F.Fab") (width 0.1) (tstamp ef1b4b98-541b-4673-a04f-2043250fc40a))
-        (pad "" np_thru_hole circle (at 0 0) (size 5 5) (drill 5) (layers F&B.Cu *.Mask) (tstamp afb8e687-4a13-41a1-b8c0-89a749e897fe))
+        (pad "" np_thru_hole circle (at 0 0) (size 5 5) (drill 5) (layers *.Cu *.Mask) (tstamp afb8e687-4a13-41a1-b8c0-89a749e897fe))
         (pad "1" thru_hole circle (at 4.4 4.7) (size 2.5 2.5) (drill 1.5) (layers *.Cu *.Mask) (tstamp 410bb148-ed54-4cc7-b862-6e9453dc29ed) ${p.from.str})
         (pad "1" thru_hole circle (at 2.6 5.75) (size 2.5 2.5) (drill 1.5) (layers *.Cu *.Mask) (tstamp babeabf2-f3b0-4ed5-8d9e-0215947e6cf3) ${p.from.str})
         (pad "2" thru_hole circle (at -4.4 4.7) (size 2.5 2.5) (drill 1.5) (layers *.Cu *.Mask) (tstamp 7bbf981c-a063-4e30-8911-e4228e1c0743) ${p.to.str})
