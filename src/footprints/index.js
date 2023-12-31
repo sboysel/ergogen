@@ -35,6 +35,7 @@ module.exports = {
     rp2040_zero_tht_pads_cutout: require('./rp2040_zero_tht_pads_cutout'),
     scrollwheel: require('./scrollwheel'),
     slider: require('./slider'),
+    sod123: require('./sod123'),
     standoff: require('./standoff'),
     text: require('./text'),
     trrs: require('./trrs'),
