@@ -68,11 +68,6 @@ module.exports = {
       (pad "P18" smd rect (at -1.62306 ${ p.rot }) (size 0.39878 1.09982) (layers ${ p.side }.Fab ${ p.side }.Paste ${ p.side }.Mask) ${ p.P18 } (tstamp 604d9b65-7a77-44b1-9c1e-0747be156cb1))
       (pad "P19" smd rect (at -2.2733 ${ p.rot }) (size 0.39878 1.09982) (layers ${ p.side }.Fab ${ p.side }.Paste ${ p.side }.Mask) ${ p.P19 } (tstamp fc952e06-9b1a-4dda-a15f-c2c9fdb8fc74))
       (pad "P20" smd rect (at -2.92354 ${ p.rot }) (size 0.39878 1.09982) (layers ${ p.side }.Fab ${ p.side }.Paste ${ p.side }.Mask) ${ p.P20 } (tstamp e7c9b196-65fd-4d75-945e-a599595a8f4c))
-      (model "${kicad6_3dmodel_dir}/housing_ssop/tssop-20.wrl"
-        (offset (xyz 0 0 0))
-        (scale (xyz 1 1 1))
-        (rotate (xyz 90 180 180))
-      )
     )    
     `
     return body
