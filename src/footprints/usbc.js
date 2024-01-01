@@ -32,7 +32,7 @@ module.exports = {
       (fp_text value HRO_TYPE-C-31-M-12 (at 6.405 3.685 0) (layer ${ p.side }.Fab)
         (effects (font (size 1.0 1.0) (thickness 0.15)))
       )
-      (pad A1_B12 smd rect (at -3.2 -4.75 ${ p.rot }) (size 0.6 1.14) (layers ${ p.side }.Cu ${ p.side }.Paste) ${ p.A1_B12.str })
+      (pad A1_B12 smd rect (at -3.2 -4.75 ${ p.rot }) (size 0.6 1.14) (layers ${ p.side }.Cu ${ p.side }.Paste) ${ p.A1_B12 })
       (pad A4_B9 smd rect (at -2.4 -4.75 ${ p.rot }) (size 0.6 1.14) (layers ${ p.side }.Cu ${ p.side }.Paste) ${ p.A4_B9 })
       (pad A6 smd rect (at -0.25 -4.75 ${ p.rot }) (size 0.3 1.14) (layers ${ p.side }.Cu ${ p.side }.Paste) ${ p.A6 })
       (pad B7 smd rect (at -0.75 -4.75 ${ p.rot }) (size 0.3 1.14) (layers ${ p.side }.Cu ${ p.side }.Paste) ${ p.B7 })
