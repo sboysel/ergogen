@@ -39,6 +39,7 @@ module.exports = {
     standoff: require('./standoff'),
     text: require('./text'),
     trrs: require('./trrs'),
+    usbc: require('./usbc'),
     via: require('./via'),
     weact_pi_pico: require('./weact_pi_pico'),
     xiao: require('./xiao'),
