@@ -23,9 +23,9 @@ module.exports = {
   body: p => {
     const body = `
     (module "HRO_TYPE-C-31-M-12" (layer ${ p.side }.Cu)
-      ${p.at}
       (descr "")
       (attr smd)
+      ${p.at}
       (fp_text reference ${ p.reference } (at -1.85 -7.205 0) (layer ${ p.side }.Fab)
         (effects (font (size 1.0 1.0) (thickness 0.15)))
       )

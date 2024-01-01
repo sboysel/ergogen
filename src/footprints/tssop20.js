@@ -26,10 +26,9 @@ module.exports = {
   },
   body: p => {
     const body = `
-    (module "TSSOP20" (version 20221018)
-      (layer ${ p.side }.Cu)
-      (attr smd)
+    (module "TSSOP20" (layer ${ p.side }.Cu)
       ${ p.at }
+      (attr smd)
       (fp_text reference ${ p.reference } (at 0 0) (layer ${ p.side }.Fab)
           (effects (font (size 0.3 0.3) (thickness 0.075)))
         (tstamp 4e6d9590-8346-46fa-bcec-3c0b970993a6)
@@ -38,6 +37,16 @@ module.exports = {
           (effects (font (size 0.3 0.3) (thickness 0.075)))
         (tstamp 6c6fede3-348a-4455-85fe-17364c642cfb)
       )
+      (fp_line (start -3.24866 -2.19964) (end -3.24866 2.19964)
+        (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp 79719a1d-3535-448f-90da-92fc95fc8351))
+      (fp_line (start -3.24866 -2.19964) (end 3.24866 -2.19964)
+        (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp a54aa0c7-ac05-492b-b2fe-bbf4e0e5d8c8))
+      (fp_line (start -3.24866 1.59766) (end -2.64922 2.19964)
+        (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp 5481bac5-ddd8-48e3-9745-4fc9ec75fd80))
+      (fp_line (start -3.24866 2.19964) (end 3.24866 2.19964)
+        (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp bdae560a-ee69-49ef-8e70-77861c6423ca))
+      (fp_line (start 3.24866 -2.19964) (end 3.24866 2.19964)
+        (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp 46ab36a4-0d6e-4f73-9879-10809ed3cc81))
       (pad "P1" smd rect (at -2.92354 2.84988 ${ p.rot + 180 }) (size 0.39878 1.09982) (layers ${ p.side }.Cu ${ p.side }.Paste ${ p.side }.Mask) ${ p.P1 } (tstamp f98c6027-eb36-4535-882b-b75cef4af2ba))
       (pad "P2" smd rect (at -2.2733 2.84988 ${ p.rot + 180 }) (size 0.39878 1.09982) (layers ${ p.side }.Cu ${ p.side }.Paste ${ p.side }.Mask) ${ p.P2 } (tstamp 550e5f7a-94bb-48ff-968f-5a0b0c348e93))
       (pad "P3" smd rect (at -1.62306 2.84988 ${ p.rot + 180 }) (size 0.39878 1.09982) (layers ${ p.side }.Cu ${ p.side }.Paste ${ p.side }.Mask) ${ p.P3 } (tstamp 93b99a16-c5ef-4313-9bec-ae841bb08567))
@@ -63,15 +72,3 @@ module.exports = {
     return body
   }
 }
-
-      // (fp_line (start -3.24866 -2.19964) (end -3.24866 2.19964)
-      //   (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp 79719a1d-3535-448f-90da-92fc95fc8351))
-      // (fp_line (start -3.24866 -2.19964) (end 3.24866 -2.19964)
-      //   (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp a54aa0c7-ac05-492b-b2fe-bbf4e0e5d8c8))
-      // (fp_line (start -3.24866 1.59766) (end -2.64922 2.19964)
-      //   (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp 5481bac5-ddd8-48e3-9745-4fc9ec75fd80))
-      // (fp_line (start -3.24866 2.19964) (end 3.24866 2.19964)
-      //   (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp bdae560a-ee69-49ef-8e70-77861c6423ca))
-      // (fp_line (start 3.24866 -2.19964) (end 3.24866 2.19964)
-      //   (stroke (width 0.001) (type solid)) (layer ${ p.side }.Fab) (tstamp 46ab36a4-0d6e-4f73-9879-10809ed3cc81))
-
