@@ -3,7 +3,7 @@ module.exports = {
   params: {
     side: 'F',
     reference: 'J1',
-    A1_B12: 'x',
+    A1_B12: {type: 'net', value: 'A1_B12'},
     A4_B9: 'x',
     A6: 'x',
     B7: 'x',
