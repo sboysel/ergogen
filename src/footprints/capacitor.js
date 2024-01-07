@@ -2,8 +2,8 @@ module.exports = {
   params: {
     designator: 'C',
     value: 'C0603',
-    from: '',
-    to: ''
+    from: { type: 'net', value: 'from' },
+    to: { type: 'net', value: 'to' }
   },
   body: p => {
     return `
