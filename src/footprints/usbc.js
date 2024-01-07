@@ -3,6 +3,7 @@ module.exports = {
   params: {
     side: 'F',
     reference: 'J1',
+    value: 'TYPE-C-31-M-12',
     A1_B12: {type: 'net', value: 'A1_B12'},
     A4_B9: {type: 'net', value: 'A4_B9'},
     A6: {type: 'net', value: 'A6'},
@@ -22,14 +23,14 @@ module.exports = {
   },
   body: p => {
     const body = `
-    (module "HRO_TYPE-C-31-M-12" (layer ${ p.side }.Cu)
-      (descr "")
+    (module "TYPE-C-31-M-12" (layer ${ p.side }.Cu)
+      (descr "5A 1 16P Female Type-C SMD USB Connectors ROHS")
       (attr smd)
       ${p.at}
       (fp_text reference ${ p.reference } (at -1.85 -7.205 0) (layer ${ p.side }.Fab)
         (effects (font (size 1.0 1.0) (thickness 0.15)))
       )
-      (fp_text value HRO_TYPE-C-31-M-12 (at 6.405 3.685 0) (layer ${ p.side }.Fab)
+      (fp_text value ${ p.value } (at 6.405 3.685 0) (layer ${ p.side }.Fab)
         (effects (font (size 1.0 1.0) (thickness 0.15)))
       )
       (pad A1_B12 smd rect (at -3.2 -4.75 ${ p.rot }) (size 0.6 1.14) (layers ${ p.side }.Cu ${ p.side }.Paste) ${ p.A1_B12 })

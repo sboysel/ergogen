@@ -5,11 +5,11 @@ module.exports = {
         to: undefined,
         side: 'F',
         designator: 'D',
-        value: 'SOD123'
+        value: 'SOD-123 1N4148W'
     },
     body: p => `
   
-    (module D_SOD123 (layer ${ p.side }.Cu) (tedit 561B69D3)
+    (module SOD123 (layer ${ p.side }.Cu) (tedit 561B69D3)
       (attr smd)
       ${ p.at }
       (fp_text reference ${ p.ref } (at 0 1.925) (layer ${ p.side }.Fab)
