@@ -4,17 +4,18 @@ module.exports = {
         from: undefined,
         to: undefined,
         side: 'F',
-        class: 'D'
+        designator: 'D',
+        value: 'SOD123'
     },
     body: p => `
   
     (module D_SOD123 (layer ${ p.side }.Cu) (tedit 561B69D3)
       (attr smd)
       ${ p.at }
-      (fp_text reference D_SOD123 (at 0 1.925) (layer ${ p.side }.Fab)
+      (fp_text reference ${ p.ref } (at 0 1.925) (layer ${ p.side }.Fab)
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       )
-      (fp_text value VAL** (at 0 -1.925) (layer ${ p.side }.Fab) hide
+      (fp_text value ${ p.value } (at 0 -1.925) (layer ${ p.side }.Fab)
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       )
       (fp_line (start -3.075 1.2) (end -3.075 -1.2) (layer ${ p.side }.SilkS) (width 0.2))
