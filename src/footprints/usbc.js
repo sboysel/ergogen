@@ -23,7 +23,7 @@ module.exports = {
   },
   body: p => {
     const body = `
-    (module "TYPE-C-31-M-12" (layer ${ p.side }.Cu)
+    (module "TYPE-C-31-M-12" (layer F.Cu)
       (descr "5A 1 16P Female Type-C SMD USB Connectors ROHS")
       (attr smd)
       ${p.at}

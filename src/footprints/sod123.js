@@ -9,7 +9,7 @@ module.exports = {
     },
     body: p => `
   
-    (module SOD123 (layer ${ p.side }.Cu) (tedit 561B69D3)
+    (module SOD123 (layer F.Cu) (tedit 561B69D3)
       (attr smd)
       ${ p.at }
       (fp_text reference ${ p.ref } (at 0 1.925) (layer ${ p.side }.Fab)

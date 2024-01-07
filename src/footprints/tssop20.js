@@ -27,7 +27,7 @@ module.exports = {
   },
   body: p => {
     const body = `
-    (module "TSSOP20" (layer ${ p.side }.Cu)
+    (module "TSSOP20" (layer F.Cu)
       ${ p.at }
       (attr smd)
       (fp_text reference ${ p.reference } (at 0 0) (layer ${ p.side }.Fab)
