@@ -30,7 +30,7 @@ module.exports = {
       (fp_text reference ${ p.reference } (at -1.85 -7.205 0) (layer ${ p.side }.Fab)
         (effects (font (size 1.0 1.0) (thickness 0.15)))
       )
-      (fp_text value ${ p.value } (at 6.405 3.685 0) (layer ${ p.side }.Fab)
+      (fp_text value "${ p.value }" (at 6.405 3.685 0) (layer ${ p.side }.Fab)
         (effects (font (size 1.0 1.0) (thickness 0.15)))
       )
       (pad A1_B12 smd rect (at -3.2 -4.75 ${ p.rot }) (size 0.6 1.14) (layers ${ p.side }.Cu ${ p.side }.Paste) ${ p.A1_B12 })

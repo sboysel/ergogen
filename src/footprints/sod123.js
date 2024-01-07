@@ -15,7 +15,7 @@ module.exports = {
       (fp_text reference ${ p.ref } (at 0 1.925) (layer ${ p.side }.Fab)
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       )
-      (fp_text value ${ p.value } (at 0 -1.925) (layer ${ p.side }.Fab)
+      (fp_text value "${ p.value }" (at 0 -1.925) (layer ${ p.side }.Fab)
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       )
       (fp_line (start -3.075 1.2) (end -3.075 -1.2) (layer ${ p.side }.SilkS) (width 0.2))
