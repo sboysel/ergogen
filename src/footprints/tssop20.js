@@ -3,6 +3,7 @@ module.exports = {
   params: {
     side: 'F',
     reference: 'U1',
+    value: 'CH552T',
     P1: {type: 'net', value: 'P1'},
     P2: {type: 'net', value: 'P2'},  
     P3: {type: 'net', value: 'P3'},
@@ -33,7 +34,7 @@ module.exports = {
           (effects (font (size 0.3 0.3) (thickness 0.075)))
         (tstamp 4e6d9590-8346-46fa-bcec-3c0b970993a6)
       )
-      (fp_text value "PCA9518PW" (at -0.05 0.66) (layer ${ p.side }.Fab)
+      (fp_text value ${ p.value } (at 0 2.8) (layer ${ p.side }.Fab)
           (effects (font (size 0.3 0.3) (thickness 0.075)))
         (tstamp 6c6fede3-348a-4455-85fe-17364c642cfb)
       )
