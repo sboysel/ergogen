@@ -16,7 +16,7 @@ module.exports = {
         ${p.at /* parametric position */}
         ${'' /* footprint reference */}
         (fp_text reference "${p.ref}" (at 0 0) (layer ${p.side}.Fab) ${p.ref_hide} (effects (font (size 1.27 1.27) (thickness 0.15))))
-        (fp_text value "${ p.value } (at 0 0) (layer ${p.side}.Fab) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+        (fp_text value "${p.value}" (at 0 0) (layer ${p.side}.Fab) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         
         ${'' /* outline */}
         (fp_line (start 2.75 1.25) (end 1.25 2.75) (layer ${p.side}.SilkS) (width 0.15))
