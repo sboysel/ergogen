@@ -25,7 +25,8 @@ module.exports = {
       (fp_line (start 2.8 -1.2) (end 2.8 1.2) (layer ${ p.side }.SilkS) (width 0.2))
       (fp_line (start 2.8 1.2) (end -3.2 1.2) (layer ${ p.side }.SilkS) (width 0.2))
       (fp_line (start -3.2 1.2) (end -3.2 -1.2) (layer ${ p.side }.SilkS) (width 0.2))
-      (pad 2 tht rect (at 1.7 0 ${ p.rot }) (size 1.2 1.4) (drill 0.2) (layers ${ p.side }.Cu ${ p.side }.Paste ${ p.side }.Mask) ${ p.to })
+      (pad 2 thru_hole circle (at 4 0) (size 1 1) (drill 0.5) (layers "*.Cu" "*.Mask") ${ p.to })
+      (pad 2 smd rect (at 1.7 0 ${ p.rot }) (size 1.2 1.4) (layers ${ p.side }.Cu ${ p.side }.Paste ${ p.side }.Mask) ${ p.to })
       (pad 1 smd rect (at -1.7 0 ${ p.rot }) (size 1.2 1.4) (layers ${ p.side }.Cu ${ p.side }.Paste ${ p.side }.Mask) ${ p.from })
     )
     
