@@ -38,6 +38,7 @@ module.exports = {
     scrollwheel: require('./scrollwheel'),
     slider: require('./slider'),
     sod123: require('./sod123'),
+    sod123_pad2_tht: require('./sod123_pad2_tht'),
     standoff: require('./standoff'),
     text: require('./text'),
     trrs: require('./trrs'),
